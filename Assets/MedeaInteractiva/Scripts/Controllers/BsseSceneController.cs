@@ -9,6 +9,7 @@ public class BsseSceneController : MonoBehaviour
    [SerializeField] private UIState _currentState;
    [SerializeField] private BaseController[] _controllers;
    [SerializeField] private Dictionary<UIState, BaseController> _controllerStates = new Dictionary<UIState,BaseController>();
+   [SerializeField] private CanvasGroup _canvasGroup;
 
    private void Awake()
    {
@@ -24,9 +25,9 @@ public class BsseSceneController : MonoBehaviour
        
        foreach (var controller in _controllers)
        {
-           controller.Init();
            _controllerStates.Add(controller.GetCurrentState(), controller);
        }
+       OnInit(_currentState);
    }
    
     public async UniTask ChangeState(UIState state, Action onComplete = null)
@@ -37,14 +38,25 @@ public class BsseSceneController : MonoBehaviour
          {
               _currentState = state;
               onComplete?.Invoke();
+              OnInit(_currentState);
          });
     }
 
-    private async UniTask MakeTransition(UIStateTransition stateFrom, UIStateTransition stateTo, Action onComplete = null)
+    public async UniTask MakeTransition(UIStateTransition stateFrom, UIStateTransition stateTo, Action onComplete = null)
     {
        BaseController controllerFrom = _controllerStates[stateFrom.uiState];
        BaseController controllerTo = _controllerStates[stateTo.uiState];
        ToolBox.SimpleTransition(controllerFrom.GetCanvasGroup() , stateFrom.canvasGroupAlpha, controllerTo.GetCanvasGroup(), stateTo.canvasGroupAlpha, .5f, 1, onComplete);
+    }
+    
+    public CanvasGroup GetCanvasGroup()
+    {
+        return _canvasGroup;
+    }
+
+    void OnInit(UIState newState)
+    {
+        _controllerStates[newState].Init();
     }
 }
 

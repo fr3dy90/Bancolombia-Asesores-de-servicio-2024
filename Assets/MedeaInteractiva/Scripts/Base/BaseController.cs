@@ -2,12 +2,17 @@ using UnityEngine;
 
 public class BaseController : MonoBehaviour
 {
-    private UIState _currentState;
-    private BaseView _baseView;
+    [SerializeField] protected UIState _currentState;
+    protected BaseView _baseView;
     
     public virtual void Init()
     {
-        _baseView.Initialize();   
+        if(_baseView == null)
+        {
+            _baseView = GetComponentInChildren<BaseView>();
+        }
+        _baseView.Initialize();
+        OnStart();
     }
     
     public UIState GetCurrentState()
@@ -18,5 +23,10 @@ public class BaseController : MonoBehaviour
     public CanvasGroup GetCanvasGroup()
     {
         return _baseView.GetCanvasGroup();
+    }
+    
+    protected virtual void OnStart()
+    {
+        
     }
 }
