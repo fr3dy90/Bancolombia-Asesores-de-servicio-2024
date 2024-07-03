@@ -1,0 +1,467 @@
+fileFormatVersion: 2
+guid: 0eb9a1195c4424349ab85ba2245d0b71
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Black_Glass.001
+    second: {fileID: 2100000, guid: e6174a685d9fadd429b0f64c14d44f6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Cap.001
+    second: {fileID: 2100000, guid: bc5bddc2135a2e64687c6b234528245d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Gold_Earring.001
+    second: {fileID: 2100000, guid: 71f250cd14f8fa24ebbce5ec31eb71dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_GreenWoolCap.001
+    second: {fileID: 2100000, guid: 09d2b08bdf74fbe4eb7d3fb7ae7839e8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Hat_01.001
+    second: {fileID: 2100000, guid: d3b521c42d3d5ff4795dda82e4ef8ce6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Hat_02_1.001
+    second: {fileID: 2100000, guid: 9cd32aef8eebe1f42a8bbec0debb1efa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Hat_02_2.001
+    second: {fileID: 2100000, guid: ffaedd7469d979f42a0c0e78e0581bee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Silver_Earring.001
+    second: {fileID: 2100000, guid: 0b67a5f27399d0e40ad1fe5ef6b00f77, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Comp_Sunglasses.001
+    second: {fileID: 2100000, guid: 572772bd94f34f740b67e55170a4a9f1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_01_Cloth.001
+    second: {fileID: 2100000, guid: dbeacebbaace78c44afd47ee5899446c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_01_Head.001
+    second: {fileID: 2100000, guid: 4030f35c497841f459f24bd38d37e6b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_02_Cloth.001
+    second: {fileID: 2100000, guid: 18bc69bdc4f44a143be591a94bdc3823, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_02_Head.001
+    second: {fileID: 2100000, guid: 7009e7877ac83f742a1b8ea1e8c3aa92, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_03_Cloth.001
+    second: {fileID: 2100000, guid: 2cb54df21ffb87647b1933e1ab577c1d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_03_Head.001
+    second: {fileID: 2100000, guid: 9aa0113c4f9b0c044811ee6f32c9f92e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_04_Cloth.001
+    second: {fileID: 2100000, guid: d22fd00d769314e4d81c13b2928e4aad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_04_Head.001
+    second: {fileID: 2100000, guid: 2fbed94d70de3d142af72693df4989cd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_05_Cloth.001
+    second: {fileID: 2100000, guid: 411f3944008fa2842a2eb3e2850aaf56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_05_Head.001
+    second: {fileID: 2100000, guid: 9ec65820396e58644adce1de52f60697, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_06_Cloth.001
+    second: {fileID: 2100000, guid: 592524b215edcf04d86add330702f3e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_06_Head.001
+    second: {fileID: 2100000, guid: 9f24159823dedc94199a0673833ecc76, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_07_Cloth.001
+    second: {fileID: 2100000, guid: 9de3b1032cd27804ab629c283a47f447, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_07_Head.001
+    second: {fileID: 2100000, guid: 7204f6a6b42247b438991cdf8b33e979, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_08_Cloth.001
+    second: {fileID: 2100000, guid: 99b007b6734ce054a904f00fac385f9f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_08_Head.001
+    second: {fileID: 2100000, guid: e9a63ab65602dc64bbb4581a534df16b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_09_Cloth.001
+    second: {fileID: 2100000, guid: 277101a26866b4e41856ae0c77dfbd43, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_10_Cloth.001
+    second: {fileID: 2100000, guid: f58f80bcbe42f5b43868030a1487d09a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_10_Head.001
+    second: {fileID: 2100000, guid: eecb1d67ae94026498b1cb7c9b9ef524, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_11_Cloth_1.001
+    second: {fileID: 2100000, guid: f904079e71f30064184ac48c4885ea34, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_11_Cloth_2.001
+    second: {fileID: 2100000, guid: 02a4b1dfbd5e5744f9f296c2189361fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_11_Cloth_3.001
+    second: {fileID: 2100000, guid: 2f20dec178b1771429bc7268f2cb73b1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_11_Head.001
+    second: {fileID: 2100000, guid: 87a986d4fcd3ce24ca5df9a32e53c3e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_12_Cloth.001
+    second: {fileID: 2100000, guid: 1a6a300fc74d25942a2d5ae7de2a3ba0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_12_Head.001
+    second: {fileID: 2100000, guid: c7493120b101b1d409c9f4d3097bf234, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_13_Cloth.001
+    second: {fileID: 2100000, guid: 0f86d6127054ff842a2a4e42440beacd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_13_Head.001
+    second: {fileID: 2100000, guid: 1035778ee6a80394a85330fd61d2971d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_14_Cloth.001
+    second: {fileID: 2100000, guid: 84c770d726a97184990dd3020445ab11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_14_Head.001
+    second: {fileID: 2100000, guid: f0286fbfa97555846bd0c986783972e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_15_Cloth.001
+    second: {fileID: 2100000, guid: ff6d45de79b9f804baccd366cc33b926, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_15_Head.001
+    second: {fileID: 2100000, guid: 57e8676575bff3c429aedfd18a410474, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_16_Cloth.001
+    second: {fileID: 2100000, guid: c426a98e6067bb741a5405c05ffd87ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_16_Head.001
+    second: {fileID: 2100000, guid: 5bfe2868e8278ec43b869b79b9e42394, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_17_Cloth.001
+    second: {fileID: 2100000, guid: 2bb1c3efc471b1042bbd8d4e11324a09, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_17_Head.001
+    second: {fileID: 2100000, guid: d1c3a646ffc52a34ba9ea601ac9487bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_Hand_Black.001
+    second: {fileID: 2100000, guid: effab79d522d43641a509b9e61d67e91, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_Hand_Standard.001
+    second: {fileID: 2100000, guid: 067fa4772c8abde4c95dd305a3f5e8e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Man_Hand_White.001
+    second: {fileID: 2100000, guid: f3a9719d2a4109d4d83fbc43a7f64c68, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Phone.001
+    second: {fileID: 2100000, guid: bb78fce72e59c47479f66004ffc159a0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_01_1_Cloth.001
+    second: {fileID: 2100000, guid: b8880e47b818bf6469e16ee14f891185, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_01_2_Cloth.001
+    second: {fileID: 2100000, guid: 69d3ec2cae7450848b6b645d03acc50c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_01_Head.001
+    second: {fileID: 2100000, guid: 7b61d548b2db307469eb0d9da1f63da5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_02_1_Cloth.001
+    second: {fileID: 2100000, guid: 8d28ae1e8388c2a48bf46c5c466efc00, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_02_2_Cloth.001
+    second: {fileID: 2100000, guid: 3fea27c9144fca84a9086ac82c42add3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_02_3_Cloth.001
+    second: {fileID: 2100000, guid: 0f04459cb6d7fc44bb4ab15a5d74de54, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_02_Head.001
+    second: {fileID: 2100000, guid: 52d75f28e786f154fa281325709ec360, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_03_1_Cloth.001
+    second: {fileID: 2100000, guid: 15327b2560d284f4991606acaefbf82d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_03_2_Cloth.001
+    second: {fileID: 2100000, guid: b58712a2e75e2b34a879c1cfadd50240, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_03_2_Head.001
+    second: {fileID: 2100000, guid: 06e22574e38819f44a23cc4007283231, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_03_Head.001
+    second: {fileID: 2100000, guid: 3edbbecb795d3924ea2e76bbf6e6499f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_04_1_Cloth.001
+    second: {fileID: 2100000, guid: c5e86b88154d2f2429dd25200e6227d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_04_1_Head.001
+    second: {fileID: 2100000, guid: 2c86022fec08a9b45a87b173259188a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_04_2_Cloth.001
+    second: {fileID: 2100000, guid: 5604e2447da2b964dbf7f1b80d5fff15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_04_2_Head.001
+    second: {fileID: 2100000, guid: ad1053641c6ae5843aac0341c56aef0f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_05_1.001
+    second: {fileID: 2100000, guid: 991f6074f8203bf4db89061c945ca309, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_05_2.001
+    second: {fileID: 2100000, guid: fccdd8382d250a34f8dbda163f5b15bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_06_1_Cloth.001
+    second: {fileID: 2100000, guid: d7205db4675075d42b2b138824389f79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_06_2_Cloth.001
+    second: {fileID: 2100000, guid: 1d77773e12044ce4699ff7c130f27e90, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_06_Head.001
+    second: {fileID: 2100000, guid: 08c93af8580829840a4ba3bc7f3a3d17, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_07_1_Cloth.001
+    second: {fileID: 2100000, guid: a8ed48c3632359d48b4a41ada4dacfa5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_07_2_Cloth.001
+    second: {fileID: 2100000, guid: c7c281c8bdbb83c438c9719f3383aa39, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_07_Head.001
+    second: {fileID: 2100000, guid: ac45d8c3c812451428c176ce890a4dce, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DFS_Woman_Hand_Neutral.001
+    second: {fileID: 2100000, guid: fcdf513fd7a308442bcc577460b1ae6b, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
