@@ -7,6 +7,7 @@ public class WelcomeController : BaseController
    protected override void OnStart()
    {
       base.OnStart();
+      Launch();
    }
 
    private async void Launch()

@@ -22,10 +22,10 @@ public class BsseSceneController : MonoBehaviour
            Destroy(gameObject);
        }
        
-       
-       foreach (var controller in _controllers)
+       foreach (BaseController controller in _controllers)
        {
-           _controllerStates.Add(controller.GetCurrentState(), controller);
+           controller.Init();
+           _controllerStates[controller.GetCurrentState()] = controller;
        }
        OnInit(_currentState);
    }
@@ -56,7 +56,8 @@ public class BsseSceneController : MonoBehaviour
 
     void OnInit(UIState newState)
     {
-        _controllerStates[newState].Init();
+        BaseController controller = _controllerStates[newState];
+        controller.Init();
     }
 }
 
