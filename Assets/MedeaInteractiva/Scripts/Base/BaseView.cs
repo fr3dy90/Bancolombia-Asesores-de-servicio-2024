@@ -5,12 +5,13 @@ using UnityEngine;
 public class BaseView : MonoBehaviour
 {
     [SerializeField] private CanvasGroup _canvasGroup;
-    public void Initialize()
+    public virtual void Initialize()
     {
-        if (_canvasGroup == null)
-        {
-            _canvasGroup = GetComponent<CanvasGroup>();
-        }
+        if (_canvasGroup != null) return;
+        _canvasGroup = GetComponent<CanvasGroup>();
+        _canvasGroup.alpha = 0;
+        _canvasGroup.blocksRaycasts = false;
+        _canvasGroup.interactable = false;
     }
 
     public CanvasGroup GetCanvasGroup()

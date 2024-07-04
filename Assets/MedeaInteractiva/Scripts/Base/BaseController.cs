@@ -12,7 +12,6 @@ public class BaseController : MonoBehaviour
             _baseView = GetComponentInChildren<BaseView>();
         }
         _baseView.Initialize();
-        OnStart();
     }
     
     public UIState GetCurrentState()
@@ -25,7 +24,7 @@ public class BaseController : MonoBehaviour
         return _baseView.GetCanvasGroup();
     }
     
-    protected virtual void OnStart()
+    public virtual void OnStart()
     {
         
     }
