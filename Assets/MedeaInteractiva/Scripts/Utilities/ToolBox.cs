@@ -32,9 +32,9 @@ public static class ToolBox
         onComplete?.Invoke();
     }
 
-    public static async UniTask SimpleTransition(CanvasGroup canvasGroupFrom, float fromAlpha, CanvasGroup canvasGroupTo, float toAlpha, float fadeDuration, float transitonDuration,Action onComplete)
+    public static async UniTask SimpleTransition(CanvasGroup canvasGroupFrom, float fromAlpha, CanvasGroup canvasGroupTo, float toAlpha, float fadeDuration, float transitonDuration, Action from = null, Action to = null,Action onComplete= null)
     {
-        await SimpleFade(canvasGroupFrom, fromAlpha, fadeDuration, null);
+        await SimpleFade(canvasGroupFrom, fromAlpha, fadeDuration, from);
         canvasGroupFrom.gameObject.SetActive(canvasGroupFrom.alpha >= .1);
         if (toAlpha == 0)
         {
@@ -43,7 +43,8 @@ public static class ToolBox
         }
 
         await UniTask.WaitForSeconds(transitonDuration);
-        await SimpleFade(canvasGroupTo, toAlpha, fadeDuration, onComplete);
+        await SimpleFade(canvasGroupTo, toAlpha, fadeDuration, to);
         canvasGroupTo.gameObject.SetActive(canvasGroupTo.alpha >= .1);
+        onComplete?.Invoke();
     }
 }

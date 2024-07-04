@@ -1,18 +1,19 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class MainMenuController : BaseController
 {
-    [SerializeField] private MainMenuView _baseView;
+   [SerializeField] private MainMenuView _view;
 
     public override void Init()
     {
         base.Init();
-        _baseView = GetComponentInChildren<MainMenuView>();
+        _view = GetComponentInChildren<MainMenuView>();
     }
     public override void OnStart()
     {
         base.OnStart();
-        _baseView.OnSetMenuState(BsseSceneController.Instance._currentMenuState);
+        _view.OnSetMenuState(BsseSceneController.Instance._currentMenuState);
     }  
 }
 

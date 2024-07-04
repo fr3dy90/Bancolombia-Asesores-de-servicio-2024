@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainMenuView : BaseView
 {
@@ -6,18 +7,23 @@ public class MainMenuView : BaseView
     
     public void OnSetMenuState(MainMenu menuState)
     {
-        switch (menuState)
+       _buttons[(int)menuState].SetActive(true);
+       InitializeButtons();
+    }
+
+    public void InitializeButtons()
+    {
+        for (int i = 0; i < _buttons.Length; i++)
         {
-            case MainMenu.Conoce:
-                _buttons[0].SetActive(true);
-                break;
-            case MainMenu.Clasifica:
-                _buttons[1].SetActive(true);
-                break;
-            case MainMenu.Conecta:
-                _buttons[2].SetActive(true);
-                break;
-            
+            var i1 = i;
+            _buttons[i].GetComponent<Button>().onClick.RemoveAllListeners();
+            _buttons[i].GetComponent<Button>().onClick.AddListener(
+               () =>
+               {
+                   BsseSceneController.Instance._currentMenuState = (MainMenu)i1;
+                   BsseSceneController.Instance.ChangeState(UIState.ModalIntro);
+               }
+           );
         }
     }
 }

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e64d9b0e1e2e0246b5a86dd5da1074a, type: 3}
+  m_Name: Conecta
+  m_EditorClassIdentifier: 
+  modalSprite: {fileID: 1816760184, guid: 5d76fb1f3c870df42a31f63b00330fdc, type: 3}
+  modalContent:
+  - text: "Conocer para qu\xE9 sirve cada uno de los elementos es fundamental para
+      desarrollar de manera correcta y segura los procesos asociados a tu rol."
+    timeInScreen: 5
+    audio: {fileID: 0}
+  - text: "Esta vez, tendr\xE1s el reto de asociar cada uno de los objetos y herramientas
+      que hacen parte de tu puesto de trabajo, con su respectiva funci\xF3n."
+    timeInScreen: 5
+    audio: {fileID: 0}
+  - text: "Relaciona y empareja los objetos de tu trabajo eligiendo la definici\xF3n
+      que m\xE1s corresponda al elemento."
+    timeInScreen: 5
+    audio: {fileID: 0}
+  - text: "Arrastra cada objeto hasta su definici\xF3n recuerda dejar tu mirada fija
+      en este. Si te equivocas, puedes intentar nuevamente hasta que aciertes."
+    timeInScreen: 5
+    audio: {fileID: 0}

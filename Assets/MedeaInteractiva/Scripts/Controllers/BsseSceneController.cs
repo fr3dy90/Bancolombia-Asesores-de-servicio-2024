@@ -33,28 +33,27 @@ public class BsseSceneController : MonoBehaviour
    private async void Start()
    {
        BaseController controller = _controllerStates[_currentState];
-       await ToolBox.SimpleTransition(GetCanvasGroup(), 0, controller.GetCanvasGroup(), 0, .5f, 1f, null);
-       controller.OnStart();
+       await ToolBox.SimpleTransition(GetCanvasGroup(), 0, controller.GetCanvasGroup(), 0, .5f, 1f, null, null, ()=> controller.OnStart());
    }
 
-   public async UniTask ChangeState(UIState state, Action onComplete = null)
+   public async UniTask ChangeState(UIState state, Action from = null, Action to= null, Action onComplete = null)
     {
-    
          UIStateTransition stateFrom = new UIStateTransition {uiState = _currentState, canvasGroupAlpha = 1};
          UIStateTransition stateTo = new UIStateTransition {uiState = state, canvasGroupAlpha = 0};
-         await MakeTransition(stateFrom, stateTo, () =>
-         {
-              _currentState = state;
-              onComplete?.Invoke();
-              OnInit(_currentState);
-         });
+         _currentState = state;
+         await MakeTransition(stateFrom, stateTo, from, to, onComplete);
     }
 
-    public async UniTask MakeTransition(UIStateTransition stateFrom, UIStateTransition stateTo, Action onComplete = null)
+    public async UniTask MakeTransition(UIStateTransition stateFrom, UIStateTransition stateTo, Action from, Action to,Action onComplete = null)
     {
        BaseController controllerFrom = _controllerStates[stateFrom.uiState];
        BaseController controllerTo = _controllerStates[stateTo.uiState];
-       ToolBox.SimpleTransition(controllerFrom.GetCanvasGroup() , stateFrom.canvasGroupAlpha, controllerTo.GetCanvasGroup(), stateTo.canvasGroupAlpha, .5f, 1, onComplete);
+       ToolBox.SimpleTransition(controllerFrom.GetCanvasGroup(), 1, controllerTo.GetCanvasGroup(), 0, .5f, .5f,
+           () =>
+           {
+               from?.Invoke();
+               controllerTo.OnStart();
+           }, to, onComplete);
     }
     
     public CanvasGroup GetCanvasGroup()

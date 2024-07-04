@@ -1,4 +1,4 @@
-using System;
+using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,15 +9,21 @@ public class ModalIntroView : BaseView
    [SerializeField] private TextMeshProUGUI _textContent;
    [SerializeField] private Button _btnContinue;
    
-   public void SetBasicIntro(Sprite icon, string text, Action buttonActon = null)
+   public async void SetBasicIntro(ModalWindowIntro modalWindowIntro)
    {
-       _imgIconMoment.sprite = icon;
-       _textContent.text = text;
-       _btnContinue.onClick.RemoveAllListeners();
-       _btnContinue.gameObject.SetActive(buttonActon != null);
-       _btnContinue.onClick.AddListener(() =>
+       _imgIconMoment.sprite = modalWindowIntro.modalSprite;
+       foreach (ModalContent content in modalWindowIntro.modalContent)
        {
-            buttonActon?.Invoke();
-       });
+           _btnContinue.gameObject.SetActive(false);
+           _textContent.text = content.text;
+           _btnContinue.onClick.RemoveAllListeners();
+           
+           await UniTask.WaitForSeconds(content.timeInScreen);
+           _btnContinue.gameObject.SetActive(content.buttonAction != null);
+           _btnContinue.onClick.AddListener(() =>
+           {
+               content.buttonAction?.Invoke();
+           });
+       }
    }
 }
