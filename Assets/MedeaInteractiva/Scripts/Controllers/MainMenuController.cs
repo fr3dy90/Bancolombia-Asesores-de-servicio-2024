@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class MainMenuController : BaseController
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private MainMenuView _baseView;
 
-    // Update is called once per frame
-    void Update()
+    public override void Init()
     {
-        
+        base.Init();
+        _baseView = GetComponentInChildren<MainMenuView>();
     }
+    public override void OnStart()
+    {
+        base.OnStart();
+        _baseView.OnSetMenuState(BsseSceneController.Instance._currentMenuState);
+    }  
 }
+

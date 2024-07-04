@@ -16,6 +16,19 @@ public static class ToolBox
             canvasGroup.alpha = Mathf.Lerp(fromAlpha, toAlpha, easeOutProgress);
             await UniTask.Yield();
         }
+
+        canvasGroup.alpha = toAlpha;
+        if (toAlpha == 1)
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+        else
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.gameObject.SetActive(false);
+        }
         onComplete?.Invoke();
     }
 

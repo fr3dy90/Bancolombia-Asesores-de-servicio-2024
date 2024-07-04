@@ -10,6 +10,7 @@ public class BsseSceneController : MonoBehaviour
    [SerializeField] private BaseController[] _controllers;
    [SerializeField] private Dictionary<UIState, BaseController> _controllerStates = new Dictionary<UIState,BaseController>();
    [SerializeField] private CanvasGroup _canvasGroup;
+   public MainMenu _currentMenuState;
 
    private void Awake()
    {
@@ -27,11 +28,18 @@ public class BsseSceneController : MonoBehaviour
            controller.Init();
            _controllerStates[controller.GetCurrentState()] = controller;
        }
-       OnInit(_currentState);
    }
-   
-    public async UniTask ChangeState(UIState state, Action onComplete = null)
+
+   private async void Start()
+   {
+       BaseController controller = _controllerStates[_currentState];
+       await ToolBox.SimpleTransition(GetCanvasGroup(), 0, controller.GetCanvasGroup(), 0, .5f, 1f, null);
+       controller.OnStart();
+   }
+
+   public async UniTask ChangeState(UIState state, Action onComplete = null)
     {
+    
          UIStateTransition stateFrom = new UIStateTransition {uiState = _currentState, canvasGroupAlpha = 1};
          UIStateTransition stateTo = new UIStateTransition {uiState = state, canvasGroupAlpha = 0};
          await MakeTransition(stateFrom, stateTo, () =>
@@ -57,7 +65,7 @@ public class BsseSceneController : MonoBehaviour
     void OnInit(UIState newState)
     {
         BaseController controller = _controllerStates[newState];
-        controller.Init();
+        controller.OnStart();
     }
 }
 
@@ -65,8 +73,14 @@ public enum UIState
 {
     Welcome,
     Menu,
-    IntroConoce,
-    Conoce
+    ModalIntro
+}
+
+public enum MainMenu
+{
+    Conoce,
+    Clasifica,
+    Conecta
 }
 
 public struct UIStateTransition
