@@ -5,6 +5,7 @@ public class ModalIntroController : BaseController
 {
    public ModalIntroView _view;
    [SerializeField] private ModalWindowIntro[] _modalWindowIntros;
+   [SerializeField] private ModalWindowIntro[] _ImageModalWindowIntros;
    public override void Init()
    {
       base.Init();
@@ -16,8 +17,7 @@ public class ModalIntroController : BaseController
       
       _modalWindowIntros[1].modalContent[3].buttonAction = ()=>
       {
-         BsseSceneController.Instance._currentMenuState = MainMenu.Conecta;
-         BsseSceneController.Instance.ChangeState(UIState.Menu);
+         OnSetView(_ImageModalWindowIntros[0]);
       };
       
       _modalWindowIntros[2].modalContent[3].buttonAction = ()=>

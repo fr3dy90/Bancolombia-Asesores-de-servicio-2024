@@ -12,8 +12,16 @@ public class ModalWindowIntro : ScriptableObject
 [Serializable]
 public class ModalContent
 {
+    public UIType requiredType;
     [TextArea(3, 3)] public string text;
     public float timeInScreen;
     public AudioClip audio;
     public Action buttonAction;
+    public int imageIndex;
+}
+
+public enum UIType
+{
+    Standard,
+    Images
 }
