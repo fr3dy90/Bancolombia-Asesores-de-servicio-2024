@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BaseView : MonoBehaviour
 {
-    [SerializeField] private CanvasGroup _canvasGroup;
+    [SerializeField] protected CanvasGroup _canvasGroup;
     public virtual void Initialize()
     {
         if (_canvasGroup != null) return;

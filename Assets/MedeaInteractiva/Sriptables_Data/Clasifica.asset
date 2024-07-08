@@ -14,20 +14,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modalSprite: {fileID: -271724085, guid: 5d76fb1f3c870df42a31f63b00330fdc, type: 3}
   modalContent:
-  - text: "Identificar las herramientas esenciales que har\xE1n parte de tu d\xEDa
+  - requiredType: 0
+    text: "Identificar las herramientas esenciales que har\xE1n parte de tu d\xEDa
       a d\xEDa, es fundamental para que puedas ejercer de forma adecuada tu rol y
       prestar un servicio memorable para nuestros clientes."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "En esta actividad, deber\xE1s clasificar las diferentes herramientas que
+    imageIndex: 0
+  - requiredType: 0
+    text: "En esta actividad, deber\xE1s clasificar las diferentes herramientas que
       se encuentran en tu puesto de trabajo seg\xFAn sus caracter\xEDsticas."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "Ten en cuenta que, como Asesor de servicio, debes actuar de forma \xE1gil
+    imageIndex: 0
+  - requiredType: 0
+    text: "Ten en cuenta que, como Asesor de servicio, debes actuar de forma \xE1gil
       y oportuna; por eso, en este reto el tiempo ser\xE1 un factor determinante
       para que puedas obtener m\xE1s puntos."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "\xA1La preparaci\xF3n es la base para ofrecer un excelente servicio!"
+    imageIndex: 0
+  - requiredType: 0
+    text: "\xA1La preparaci\xF3n es la base para ofrecer un excelente servicio!"
     timeInScreen: 5
     audio: {fileID: 0}
+    imageIndex: 0
+  - requiredType: 0
+    text: "<size=100>Instrucci\xF3nes</size>"
+    timeInScreen: 1
+    audio: {fileID: 0}
+    imageIndex: 0

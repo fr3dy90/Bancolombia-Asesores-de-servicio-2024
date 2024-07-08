@@ -15,9 +15,14 @@ public class ModalIntroController : BaseController
          BsseSceneController.Instance.ChangeState(UIState.Menu);
       };
       
-      _modalWindowIntros[1].modalContent[3].buttonAction = ()=>
+      _modalWindowIntros[1].modalContent[4].buttonAction = ()=>
       {
          OnSetView(_ImageModalWindowIntros[0]);
+      };
+      
+      _ImageModalWindowIntros[0].modalContent[1].buttonAction = ()=>
+      {
+         BsseSceneController.Instance.ChangeState(UIState.CountDown);
       };
       
       _modalWindowIntros[2].modalContent[3].buttonAction = ()=>

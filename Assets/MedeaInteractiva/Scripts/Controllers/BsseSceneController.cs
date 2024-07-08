@@ -72,7 +72,9 @@ public enum UIState
 {
     Welcome,
     Menu,
-    ModalIntro
+    ModalIntro,
+    CountDown,
+    Retroalimentation
 }
 
 public enum MainMenu
