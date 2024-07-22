@@ -33,7 +33,7 @@ public class BsseSceneController : MonoBehaviour
    private async void Start()
    {
        BaseController controller = _controllerStates[_currentState];
-       await ToolBox.SimpleTransition(GetCanvasGroup(), 0, controller.GetCanvasGroup(), 0, .5f, 1f, null, null, ()=> controller.OnStart());
+       //await ToolBox.SimpleTransition(GetCanvasGroup(), 0, controller.GetCanvasGroup(), 0, .5f, 1f, null, null, ()=> controller.OnStart());
    }
 
    public async UniTask ChangeState(UIState state, Action from = null, Action to= null, Action onComplete = null)
@@ -70,6 +70,7 @@ public class BsseSceneController : MonoBehaviour
 
 public enum UIState
 {
+    None,
     Welcome,
     Menu,
     ModalIntro,

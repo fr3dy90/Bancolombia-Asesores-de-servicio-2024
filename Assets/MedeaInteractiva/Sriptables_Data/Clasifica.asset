@@ -40,7 +40,7 @@ MonoBehaviour:
     audio: {fileID: 0}
     imageIndex: 0
   - requiredType: 0
-    text: "<size=100>Instrucci\xF3nes</size>"
+    text: "<size=70>Instrucci\xF3nes</size>"
     timeInScreen: 1
     audio: {fileID: 0}
     imageIndex: 0

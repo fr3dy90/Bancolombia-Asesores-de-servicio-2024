@@ -47,4 +47,18 @@ public static class ToolBox
         canvasGroupTo.gameObject.SetActive(canvasGroupTo.alpha >= .1);
         onComplete?.Invoke();
     }
+
+    public static async UniTask SimpleFadeAvatar(float alpha, float duration)
+    {
+        float to = alpha == 0 ? 1 : 0;
+        float elapsedTime = 0;
+        while (elapsedTime<duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / duration;
+            float easeOutProgress = 1 - Mathf.Pow(1 - progress, 2);
+            alpha = Mathf.Lerp(alpha, to, easeOutProgress);
+            await UniTask.Yield();
+        }
+    }
 }
