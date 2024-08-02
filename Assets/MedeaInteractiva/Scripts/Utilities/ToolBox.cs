@@ -1,9 +1,12 @@
 using System;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
+using UnityEngine.UI;
 
 public static class ToolBox
 {
+    private const int ZERO = 0;
+    private const int ONE = 1;
     public static async UniTask SimpleFade(CanvasGroup canvasGroup, float fromAlpha, float duration, Action onComplete)
     {
         float toAlpha = fromAlpha == 0 ? 1 : 0;
@@ -61,4 +64,50 @@ public static class ToolBox
             await UniTask.Yield();
         }
     }
+
+    public static async UniTask FadeAvatar(Material mat, string strProperty, float fromAlpha, float duration, Action onComplete = null)
+    {
+        float toAlpha = fromAlpha == 0 ? 1 : 0;
+        float elapsedTime = 0;
+        while (elapsedTime < duration)
+        {
+            elapsedTime += Time.deltaTime;
+            float progress = elapsedTime / duration;
+            float easeOutProgress = 1 - Mathf.Pow(1 - progress, 2);
+            mat.SetFloat(strProperty, Mathf.Lerp(fromAlpha, toAlpha, easeOutProgress));  
+            await UniTask.Yield();
+        }
+        onComplete?.Invoke();
+    }
+    
+    public static async void PlayAvatar(Avatar avatar, string MAT_ALPHA, float startTime, float stopTime, Action onComplete = null)
+    {
+        if (startTime >= 0 && startTime < avatar._videoAvatar.length)
+        {
+            avatar._videoAvatar.time = startTime;
+            avatar._videoAvatar.Play();
+        }
+        else
+        {
+            Debug.LogWarning($"Check video time", avatar._videoAvatar.gameObject);
+        }
+      
+        if (avatar._videoAvatar.gameObject.GetComponent<RawImage>().material.GetFloat(MAT_ALPHA) <= .1f)
+        {
+            await FadeAvatar(avatar._matAvatar, MAT_ALPHA, ZERO, .8f);
+        }
+
+        await StopVideo(avatar, stopTime);
+      
+        await FadeAvatar(avatar._matAvatar, MAT_ALPHA, ONE, .8f);
+
+        onComplete?.Invoke();
+    }
+
+    private static async UniTask StopVideo(Avatar avatar ,float stopTime)
+    {
+        await (UniTask.WaitUntil(()=> avatar._videoAvatar.time > stopTime));
+        avatar._videoAvatar.Pause();
+    }
+    
 }
