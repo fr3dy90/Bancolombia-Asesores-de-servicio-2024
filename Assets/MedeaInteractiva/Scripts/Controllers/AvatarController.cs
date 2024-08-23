@@ -1,8 +1,6 @@
 
 using System;
-using Cysharp.Threading.Tasks;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class AvatarController : BaseController
@@ -22,12 +20,14 @@ public class AvatarController : BaseController
       _avatarMarcela._matAvatar.SetFloat(MAT_ALPHA, ZERO);
       _avatarMateo._videoAvatar.playOnAwake = false;
       _avatarMarcela._videoAvatar.playOnAwake = false;
+      _avatarMateo._videoAvatar.Pause();
+      _avatarMarcela._videoAvatar.Pause();
    }
 
    public override void OnStart()
    {
       base.OnStart();
-      ToolBox.SimpleFade(_baseView.GetCanvasGroup(), 0, .5f, () =>
+      ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
          ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 0f, 16f, MateoEntrance);
       });
@@ -35,8 +35,10 @@ public class AvatarController : BaseController
 
    private void MateoEntrance()
    {
-      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23);
+      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23, ()=> BsseSceneController.Instance.ChangeState(UIState.Cinematic));
    }
+   
+   
 }
 
 [Serializable]

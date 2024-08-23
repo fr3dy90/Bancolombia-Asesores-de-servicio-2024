@@ -7,47 +7,69 @@ public static class ToolBox
 {
     private const int ZERO = 0;
     private const int ONE = 1;
-    public static async UniTask SimpleFade(CanvasGroup canvasGroup, float fromAlpha, float duration, Action onComplete)
+    public static async UniTask SimpleFade(float fromAlpha, float duration,CanvasGroup canvasGroup = null ,Action onComplete = null)
     {
-        float toAlpha = fromAlpha == 0 ? 1 : 0;
-        float elapsedTime = 0;
-        while (elapsedTime < duration)
+            float elapsedTime = 0;
+        if (canvasGroup == null)
         {
-            elapsedTime += Time.deltaTime;
-            float progress = elapsedTime / duration;
-            float easeOutProgress = 1 - Mathf.Pow(1 - progress, 2);
-            canvasGroup.alpha = Mathf.Lerp(fromAlpha, toAlpha, easeOutProgress);
-            await UniTask.Yield();
-        }
-
-        canvasGroup.alpha = toAlpha;
-        if (toAlpha == 1)
-        {
-            canvasGroup.interactable = true;
-            canvasGroup.blocksRaycasts = true;
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+                await UniTask.Yield();
+            }
         }
         else
         {
-            canvasGroup.interactable = false;
-            canvasGroup.blocksRaycasts = false;
-            canvasGroup.gameObject.SetActive(false);
+            float toAlpha = fromAlpha == 0 ? 1 : 0;
+            while (elapsedTime < duration)
+            {
+                elapsedTime += Time.deltaTime;
+                float progress = elapsedTime / duration;
+                float easeOutProgress = 1 - Mathf.Pow(1 - progress, 2);
+                canvasGroup.alpha = Mathf.Lerp(fromAlpha, toAlpha, easeOutProgress);
+                await UniTask.Yield();
+            }
+
+            canvasGroup.alpha = toAlpha;
+            if (toAlpha == 1)
+            {
+                canvasGroup.interactable = true;
+                canvasGroup.blocksRaycasts = true;
+            }
+            else
+            {
+                canvasGroup.interactable = false;
+                canvasGroup.blocksRaycasts = false;
+                canvasGroup.gameObject.SetActive(false);
+            }
         }
+       
         onComplete?.Invoke();
     }
 
-    public static async UniTask SimpleTransition(CanvasGroup canvasGroupFrom, float fromAlpha, CanvasGroup canvasGroupTo, float toAlpha, float fadeDuration, float transitonDuration, Action from = null, Action to = null,Action onComplete= null)
+    public static async UniTask SimpleTransition(float fromAlpha, float toAlpha, float fadeDuration, float transitonDuration, CanvasGroup canvasGroupFrom = null ,CanvasGroup canvasGroupTo = null, Action from = null, Action to = null,Action onComplete= null)
     {
-        await SimpleFade(canvasGroupFrom, fromAlpha, fadeDuration, from);
-        canvasGroupFrom.gameObject.SetActive(canvasGroupFrom.alpha >= .1);
-        if (toAlpha == 0)
+        await SimpleFade( fromAlpha, fadeDuration, canvasGroupFrom, from);
+        if (canvasGroupFrom != null)
         {
-            canvasGroupTo.alpha = 0;
-            canvasGroupTo.gameObject.SetActive(true);
+            canvasGroupFrom.gameObject.SetActive(canvasGroupFrom.alpha >= .1);
+        }
+
+        if (canvasGroupTo != null)
+        {
+            if (toAlpha == 0)
+            {
+                canvasGroupTo.alpha = 0;
+                canvasGroupTo.gameObject.SetActive(true);
+            }
         }
 
         await UniTask.WaitForSeconds(transitonDuration);
-        await SimpleFade(canvasGroupTo, toAlpha, fadeDuration, to);
-        canvasGroupTo.gameObject.SetActive(canvasGroupTo.alpha >= .1);
+        await SimpleFade( toAlpha, fadeDuration, canvasGroupTo, to);
+        if(canvasGroupTo != null)
+        {
+            canvasGroupTo.gameObject.SetActive(canvasGroupTo.alpha >= .1);
+        }
         onComplete?.Invoke();
     }
 

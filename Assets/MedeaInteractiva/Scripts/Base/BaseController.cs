@@ -21,7 +21,15 @@ public class BaseController : MonoBehaviour
     
     public CanvasGroup GetCanvasGroup()
     {
-        return _baseView.GetCanvasGroup();
+        if (_baseView != null)
+        {
+            
+        return _baseView.GetCanvasGroup() == null ? null : _baseView.GetCanvasGroup();
+        }
+        else
+        {
+            return null;
+        }
     }
     
     public virtual void OnStart()
