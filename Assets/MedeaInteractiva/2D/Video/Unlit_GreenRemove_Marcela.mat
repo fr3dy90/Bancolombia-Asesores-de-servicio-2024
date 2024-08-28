@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GlobalAlpha: 0.000052571297
+    - _GlobalAlpha: 0
     - _Threshold: 0.4
     m_Colors:
     - _ColorToRemove: {r: 0.09019608, g: 0.7490196, b: 0.3372549, a: 1}

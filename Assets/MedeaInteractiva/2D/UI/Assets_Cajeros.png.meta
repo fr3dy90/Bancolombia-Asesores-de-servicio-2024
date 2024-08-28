@@ -1,0 +1,1514 @@
+fileFormatVersion: 2
+guid: 931b65bacb8ecd5468ddc55bf6e3ed85
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Assets_Cajeros_0
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 4961
+        width: 3114
+        height: 3112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a01c562764e1b0547a8b307ec18dd9ce
+      internalID: -856339526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_4
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 6601
+        width: 892
+        height: 1169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6001b5d9720481f4a9c479ec5396b862
+      internalID: 2041561270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_5
+      rect:
+        serializedVersion: 2
+        x: 9298
+        y: 6028
+        width: 3770
+        height: 1669
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 160, y: 230, z: 205, w: 160}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb6edc01bfbd244193b347bbd81f58b
+      internalID: 114514441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_6
+      rect:
+        serializedVersion: 2
+        x: 13206
+        y: 6039
+        width: 1340
+        height: 1702
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f8ff7480e09a0f4b93fa117f74a685a
+      internalID: -77267556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_7
+      rect:
+        serializedVersion: 2
+        x: 3684
+        y: 6595
+        width: 777
+        height: 1146
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83724a6167c1d84aaec194f38ab0001
+      internalID: 635973903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_8
+      rect:
+        serializedVersion: 2
+        x: 6399
+        y: 6603
+        width: 860
+        height: 1005
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8548141f163b79a4cb37cec6db06aa11
+      internalID: 2038164760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_9
+      rect:
+        serializedVersion: 2
+        x: 7650
+        y: 6553
+        width: 1017
+        height: 1091
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30d75f628b9064045a78c9c33e9d4199
+      internalID: 1631037661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_91
+      rect:
+        serializedVersion: 2
+        x: 3655
+        y: 5104
+        width: 3070
+        height: 591
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ed1800f03603d4f98486c3047ea013
+      internalID: -908891018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_92
+      rect:
+        serializedVersion: 2
+        x: 6881
+        y: 4757
+        width: 3291
+        height: 986
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 699e30b07cb89bd4cb74c52ce3bc71de
+      internalID: 1356016347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_93
+      rect:
+        serializedVersion: 2
+        x: 10496
+        y: 4872
+        width: 3840
+        height: 820
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7d43b9b605bcd7498944f4d16948c4b
+      internalID: -405133837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_94
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 4023
+        width: 2693
+        height: 581
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7961013893ed4a04f8127883e9086c0e
+      internalID: 436868159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_99
+      rect:
+        serializedVersion: 2
+        x: 4027
+        y: 4060
+        width: 2486
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f0928170eba6948bdcc0c4171a8a6d
+      internalID: 399775647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_101
+      rect:
+        serializedVersion: 2
+        x: 11310
+        y: 2363
+        width: 1785
+        height: 2222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 316360213e9d99e419362c6ea32d9104
+      internalID: -592519509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_103
+      rect:
+        serializedVersion: 2
+        x: 14122
+        y: 4294
+        width: 308
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53757ea4b6227644197be1db3ebed30b
+      internalID: -725650876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_110
+      rect:
+        serializedVersion: 2
+        x: 9123
+        y: 2356
+        width: 1810
+        height: 1847
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c2277e590c2a9419640939bf6a60ca
+      internalID: 907862211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_111
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 3257
+        width: 3113
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78034dd7d7a450f40b00b102fa2d3f10
+      internalID: -1431694231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_50
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 6158
+        width: 765
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a344d32e93e42244ba27d19e6a84d8a
+      internalID: 1088926790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_51
+      rect:
+        serializedVersion: 2
+        x: 3767
+        y: 6166
+        width: 667
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5de58245bf737f448823a43e17d90598
+      internalID: 129441397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_58
+      rect:
+        serializedVersion: 2
+        x: 6441
+        y: 6191
+        width: 800
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20883398db520bf409d37d9031bc6d2f
+      internalID: -1776839859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_61
+      rect:
+        serializedVersion: 2
+        x: 7679
+        y: 6197
+        width: 877
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deca7c55bd531a8478413e7074409d22
+      internalID: 1088113955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_100
+      rect:
+        serializedVersion: 2
+        x: 6799
+        y: 2410
+        width: 2022
+        height: 2092
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d56342d399ddebf4dbf6e6301fb2089d
+      internalID: -1871239066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_102
+      rect:
+        serializedVersion: 2
+        x: 13331
+        y: 4008
+        width: 580
+        height: 581
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df3c95f3345500d4fa2033c76a000c16
+      internalID: 1982071175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_117
+      rect:
+        serializedVersion: 2
+        x: 3875
+        y: 2710
+        width: 876
+        height: 876
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f95c0b8c363d174b8a37b7a60358404
+      internalID: -2031065317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_118
+      rect:
+        serializedVersion: 2
+        x: 5253
+        y: 2692
+        width: 1224
+        height: 890
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80614c9ce40ad8a49958ce2388c39451
+      internalID: 1793958147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_119
+      rect:
+        serializedVersion: 2
+        x: 13423
+        y: 3465
+        width: 939
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 175810e8acf25c24e94cd0a51b6463d5
+      internalID: 794018720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_130
+      rect:
+        serializedVersion: 2
+        x: 13442
+        y: 3018
+        width: 868
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80062bff782a1e04db5b21bb37718dad
+      internalID: -1080954635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_131
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 2337
+        width: 2492
+        height: 541
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae98348e41c8a9045a9f7ac374b1fed7
+      internalID: -1002100776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_135
+      rect:
+        serializedVersion: 2
+        x: 13412
+        y: 2391
+        width: 421
+        height: 422
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1660a42cfa1ecf64a8288ce889122c85
+      internalID: -1362510200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_136
+      rect:
+        serializedVersion: 2
+        x: 14176
+        y: 2391
+        width: 425
+        height: 425
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d512d1a0145b524589d554be521a4fb
+      internalID: 1795377142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_145
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 1400
+        width: 5881
+        height: 671
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f2e06b28eb72a419e0678a4f0ba9a1
+      internalID: -660859091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_146
+      rect:
+        serializedVersion: 2
+        x: 6621
+        y: 496
+        width: 1747
+        height: 1747
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb05d373de3bdea49898661b3222cb8b
+      internalID: 575993120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_147
+      rect:
+        serializedVersion: 2
+        x: 8561
+        y: 1317
+        width: 694
+        height: 695
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1845e4620c6935c4cad56171e9421538
+      internalID: 937603487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_148
+      rect:
+        serializedVersion: 2
+        x: 9400
+        y: 1317
+        width: 692
+        height: 691
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd9202b6537fc04d8fca536ed197677
+      internalID: 589686474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_149
+      rect:
+        serializedVersion: 2
+        x: 10237
+        y: 1514
+        width: 411
+        height: 405
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43534af58008e994bb5e0432dbe8de14
+      internalID: 2037340774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_150
+      rect:
+        serializedVersion: 2
+        x: 10863
+        y: 1476
+        width: 410
+        height: 461
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40536db6d5f91c540bd471be557bdb18
+      internalID: 340582644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_152
+      rect:
+        serializedVersion: 2
+        x: 11599
+        y: 1514
+        width: 1637
+        height: 617
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f2c3b0af1c1a3e4a820c3de4122ac91
+      internalID: 1582196728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_154
+      rect:
+        serializedVersion: 2
+        x: 13584
+        y: 1647
+        width: 393
+        height: 392
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95668c0dfcc6c447b1bd4af810e821d
+      internalID: -551152193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_155
+      rect:
+        serializedVersion: 2
+        x: 14152
+        y: 1681
+        width: 291
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8e64056949d95a469468c9086df7d71
+      internalID: 718175254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_156
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 519
+        width: 2954
+        height: 752
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f66dd1ec379c66f41918f6be0251b07e
+      internalID: -971745491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_157
+      rect:
+        serializedVersion: 2
+        x: 8727
+        y: 973
+        width: 993
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e1f908851f0924085c45f828ce2552
+      internalID: -868614088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_158
+      rect:
+        serializedVersion: 2
+        x: 9939
+        y: 973
+        width: 993
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b84b1e8252be8b429509d267536e448
+      internalID: 158660673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_159
+      rect:
+        serializedVersion: 2
+        x: 11177
+        y: 975
+        width: 986
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 593af02aa1d4b7a4db6cc04f8646aa16
+      internalID: 1228553826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_160
+      rect:
+        serializedVersion: 2
+        x: 12395
+        y: 975
+        width: 986
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f036caaa67b52ae40a583b90e2e8a6df
+      internalID: -383536909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_161
+      rect:
+        serializedVersion: 2
+        x: 13612
+        y: 1171
+        width: 291
+        height: 291
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f5d6d44d4e6e6498e38f08ef46bfc5
+      internalID: -1080606000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_162
+      rect:
+        serializedVersion: 2
+        x: 14167
+        y: 1173
+        width: 226
+        height: 225
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8921a796a3b8e004597020c4d05e770c
+      internalID: -803923378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_163
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 800
+        width: 1881
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4bc5b1d0613e24ab7263bed1c98f49
+      internalID: -2090513697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_164
+      rect:
+        serializedVersion: 2
+        x: 8743
+        y: 513
+        width: 765
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99568bd6db3f271459ad9c3d79f0e86a
+      internalID: -1296550722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_165
+      rect:
+        serializedVersion: 2
+        x: 9704
+        y: 514
+        width: 764
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 563ef1c0effa66749b81992dccf3cf6a
+      internalID: 672369198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_166
+      rect:
+        serializedVersion: 2
+        x: 10690
+        y: 511
+        width: 764
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51f1c9d16d5f81c4fa8b29b44b04e794
+      internalID: -77837424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_167
+      rect:
+        serializedVersion: 2
+        x: 11641
+        y: 449
+        width: 949
+        height: 290
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa29e22f1ceb2940ae1e323793f9680
+      internalID: -152737995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_168
+      rect:
+        serializedVersion: 2
+        x: 12826
+        y: 441
+        width: 309
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f15d97ed27744784894296a47691a895
+      internalID: -225647978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_169
+      rect:
+        serializedVersion: 2
+        x: 13328
+        y: 441
+        width: 309
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 859e5997e48288641895cf38444879d1
+      internalID: 1401478903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_170
+      rect:
+        serializedVersion: 2
+        x: 13829
+        y: 441
+        width: 310
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63ea360628b9a148a7258e22562fdc6
+      internalID: -1243431253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assets_Cajeros_171
+      rect:
+        serializedVersion: 2
+        x: 14331
+        y: 441
+        width: 309
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1430d1490d23941a1b52933555f560
+      internalID: 2110954899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4c9ec0e6ac2504741a5d4503b85bc0d6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Assets_Cajeros_0: -856339526
+      Assets_Cajeros_1: 908119400
+      Assets_Cajeros_10: -1769668838
+      Assets_Cajeros_100: -1871239066
+      Assets_Cajeros_101: -592519509
+      Assets_Cajeros_102: 1982071175
+      Assets_Cajeros_103: -725650876
+      Assets_Cajeros_104: 1393069374
+      Assets_Cajeros_105: -1116785662
+      Assets_Cajeros_106: -167650199
+      Assets_Cajeros_107: -1619546245
+      Assets_Cajeros_108: 1449397237
+      Assets_Cajeros_109: -1248396655
+      Assets_Cajeros_11: -594490301
+      Assets_Cajeros_110: 907862211
+      Assets_Cajeros_111: -1431694231
+      Assets_Cajeros_112: 1557092951
+      Assets_Cajeros_113: 1697596033
+      Assets_Cajeros_114: -1430172271
+      Assets_Cajeros_115: 2110302846
+      Assets_Cajeros_116: -1284536994
+      Assets_Cajeros_117: -2031065317
+      Assets_Cajeros_118: 1793958147
+      Assets_Cajeros_119: 794018720
+      Assets_Cajeros_12: 1283994562
+      Assets_Cajeros_120: 140145009
+      Assets_Cajeros_121: -2452363
+      Assets_Cajeros_122: 266764490
+      Assets_Cajeros_123: 1954515194
+      Assets_Cajeros_124: -722317760
+      Assets_Cajeros_125: -1307147591
+      Assets_Cajeros_126: -1565673243
+      Assets_Cajeros_127: -1143993004
+      Assets_Cajeros_128: 348385639
+      Assets_Cajeros_129: 316868048
+      Assets_Cajeros_13: -39283017
+      Assets_Cajeros_130: -1080954635
+      Assets_Cajeros_131: -1002100776
+      Assets_Cajeros_132: 712850681
+      Assets_Cajeros_133: 1294699334
+      Assets_Cajeros_134: 1312784421
+      Assets_Cajeros_135: -1362510200
+      Assets_Cajeros_136: 1795377142
+      Assets_Cajeros_137: -150511850
+      Assets_Cajeros_138: 1698012292
+      Assets_Cajeros_139: -2062438406
+      Assets_Cajeros_14: 690613672
+      Assets_Cajeros_140: -1028121412
+      Assets_Cajeros_141: 1852798083
+      Assets_Cajeros_142: -23376959
+      Assets_Cajeros_143: 120574189
+      Assets_Cajeros_144: -1883927280
+      Assets_Cajeros_145: -660859091
+      Assets_Cajeros_146: 575993120
+      Assets_Cajeros_147: 937603487
+      Assets_Cajeros_148: 589686474
+      Assets_Cajeros_149: 2037340774
+      Assets_Cajeros_15: 1621675358
+      Assets_Cajeros_150: 340582644
+      Assets_Cajeros_151: 996486633
+      Assets_Cajeros_152: 1582196728
+      Assets_Cajeros_153: -1282870426
+      Assets_Cajeros_154: -551152193
+      Assets_Cajeros_155: 718175254
+      Assets_Cajeros_156: -971745491
+      Assets_Cajeros_157: -868614088
+      Assets_Cajeros_158: 158660673
+      Assets_Cajeros_159: 1228553826
+      Assets_Cajeros_16: 1961503473
+      Assets_Cajeros_160: -383536909
+      Assets_Cajeros_161: -1080606000
+      Assets_Cajeros_162: -803923378
+      Assets_Cajeros_163: -2090513697
+      Assets_Cajeros_164: -1296550722
+      Assets_Cajeros_165: 672369198
+      Assets_Cajeros_166: -77837424
+      Assets_Cajeros_167: -152737995
+      Assets_Cajeros_168: -225647978
+      Assets_Cajeros_169: 1401478903
+      Assets_Cajeros_17: 835897835
+      Assets_Cajeros_170: -1243431253
+      Assets_Cajeros_171: 2110954899
+      Assets_Cajeros_18: 1303946670
+      Assets_Cajeros_19: -67061899
+      Assets_Cajeros_2: -942695207
+      Assets_Cajeros_20: -175090600
+      Assets_Cajeros_21: 1580331706
+      Assets_Cajeros_22: -670760763
+      Assets_Cajeros_23: 867242907
+      Assets_Cajeros_24: 1128509885
+      Assets_Cajeros_25: -1883942889
+      Assets_Cajeros_26: 2099502899
+      Assets_Cajeros_27: 261152928
+      Assets_Cajeros_28: -631189057
+      Assets_Cajeros_29: 2115432537
+      Assets_Cajeros_3: 2021594461
+      Assets_Cajeros_30: -1195113808
+      Assets_Cajeros_31: 1271623194
+      Assets_Cajeros_32: 1589879259
+      Assets_Cajeros_33: 1861127109
+      Assets_Cajeros_34: 1174056084
+      Assets_Cajeros_35: 1331601764
+      Assets_Cajeros_36: -1224083693
+      Assets_Cajeros_37: -2116238258
+      Assets_Cajeros_38: -2033047369
+      Assets_Cajeros_39: -999095023
+      Assets_Cajeros_4: 2041561270
+      Assets_Cajeros_40: -499523482
+      Assets_Cajeros_41: -619212647
+      Assets_Cajeros_42: 1868591160
+      Assets_Cajeros_43: -36681196
+      Assets_Cajeros_44: 1884213770
+      Assets_Cajeros_45: -679971058
+      Assets_Cajeros_46: -1418034062
+      Assets_Cajeros_47: 1660873517
+      Assets_Cajeros_48: 1732420399
+      Assets_Cajeros_49: -371446045
+      Assets_Cajeros_5: 114514441
+      Assets_Cajeros_50: 1088926790
+      Assets_Cajeros_51: 129441397
+      Assets_Cajeros_52: 1671263813
+      Assets_Cajeros_53: -1788700494
+      Assets_Cajeros_54: 1491223792
+      Assets_Cajeros_55: -111674724
+      Assets_Cajeros_56: -941434638
+      Assets_Cajeros_57: 867889695
+      Assets_Cajeros_58: -1776839859
+      Assets_Cajeros_59: -1900247904
+      Assets_Cajeros_6: -77267556
+      Assets_Cajeros_60: -2106071100
+      Assets_Cajeros_61: 1088113955
+      Assets_Cajeros_62: -1723214718
+      Assets_Cajeros_63: -1813870787
+      Assets_Cajeros_64: 9582594
+      Assets_Cajeros_65: 429347647
+      Assets_Cajeros_66: -1033374573
+      Assets_Cajeros_67: 834849569
+      Assets_Cajeros_68: 423276657
+      Assets_Cajeros_69: -1764605131
+      Assets_Cajeros_7: 635973903
+      Assets_Cajeros_70: -47063552
+      Assets_Cajeros_71: 1089400538
+      Assets_Cajeros_72: -1106408221
+      Assets_Cajeros_73: 40495330
+      Assets_Cajeros_74: -2142162999
+      Assets_Cajeros_75: 1064907838
+      Assets_Cajeros_76: 2070235928
+      Assets_Cajeros_77: 1277574626
+      Assets_Cajeros_78: -1332874031
+      Assets_Cajeros_79: 1819036239
+      Assets_Cajeros_8: 2038164760
+      Assets_Cajeros_80: -77530523
+      Assets_Cajeros_81: 395747783
+      Assets_Cajeros_82: 2076529034
+      Assets_Cajeros_83: -176731360
+      Assets_Cajeros_84: -278321991
+      Assets_Cajeros_85: -1823586018
+      Assets_Cajeros_86: 456269361
+      Assets_Cajeros_87: 1136591236
+      Assets_Cajeros_88: -1748063056
+      Assets_Cajeros_89: -1150161967
+      Assets_Cajeros_9: 1631037661
+      Assets_Cajeros_90: 276090958
+      Assets_Cajeros_91: -908891018
+      Assets_Cajeros_92: 1356016347
+      Assets_Cajeros_93: -405133837
+      Assets_Cajeros_94: 436868159
+      Assets_Cajeros_95: -85103210
+      Assets_Cajeros_96: 687466272
+      Assets_Cajeros_97: 1986590763
+      Assets_Cajeros_98: 1696879110
+      Assets_Cajeros_99: 399775647
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e64d9b0e1e2e0246b5a86dd5da1074a, type: 3}
   m_Name: ClaificaInstrucciones
   m_EditorClassIdentifier: 
-  modalSprite: {fileID: -271724085, guid: 5d76fb1f3c870df42a31f63b00330fdc, type: 3}
+  modalSprite: {fileID: 2041561270, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
   modalContent:
   - requiredType: 1
     text: "Clasifica tus objetos de trabajo entre las categor\xEDas <b>Dispositivos,

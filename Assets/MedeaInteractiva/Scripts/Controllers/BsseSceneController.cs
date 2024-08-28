@@ -84,7 +84,8 @@ public enum MainMenu
 {
     Conoce,
     Clasifica,
-    Conecta
+    Conecta,
+    Preparate
 }
 
 public struct UIStateTransition

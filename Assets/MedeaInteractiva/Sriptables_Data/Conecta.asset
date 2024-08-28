@@ -12,21 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e64d9b0e1e2e0246b5a86dd5da1074a, type: 3}
   m_Name: Conecta
   m_EditorClassIdentifier: 
-  modalSprite: {fileID: 1816760184, guid: 5d76fb1f3c870df42a31f63b00330fdc, type: 3}
+  modalSprite: {fileID: 2038164760, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
   modalContent:
-  - text: "Conocer para qu\xE9 sirve cada uno de los elementos es fundamental para
+  - requiredType: 0
+    text: "Conocer para qu\xE9 sirve cada uno de los elementos es fundamental para
       desarrollar de manera correcta y segura los procesos asociados a tu rol."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "Esta vez, tendr\xE1s el reto de asociar cada uno de los objetos y herramientas
+    imageIndex: 0
+  - requiredType: 0
+    text: "Esta vez, tendr\xE1s el reto de asociar cada uno de los objetos y herramientas
       que hacen parte de tu puesto de trabajo, con su respectiva funci\xF3n."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "Relaciona y empareja los objetos de tu trabajo eligiendo la definici\xF3n
+    imageIndex: 0
+  - requiredType: 0
+    text: "Relaciona y empareja los objetos de tu trabajo eligiendo la definici\xF3n
       que m\xE1s corresponda al elemento."
     timeInScreen: 5
     audio: {fileID: 0}
-  - text: "Arrastra cada objeto hasta su definici\xF3n recuerda dejar tu mirada fija
+    imageIndex: 0
+  - requiredType: 0
+    text: "Arrastra cada objeto hasta su definici\xF3n recuerda dejar tu mirada fija
       en este. Si te equivocas, puedes intentar nuevamente hasta que aciertes."
     timeInScreen: 5
     audio: {fileID: 0}
+    imageIndex: 0

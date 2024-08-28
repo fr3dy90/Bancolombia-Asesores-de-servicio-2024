@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e64d9b0e1e2e0246b5a86dd5da1074a, type: 3}
   m_Name: Conoce
   m_EditorClassIdentifier: 
-  modalSprite: {fileID: 943746796, guid: 5d76fb1f3c870df42a31f63b00330fdc, type: 3}
+  modalSprite: {fileID: 635973903, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
   modalContent:
-  - text: "\xA1Conoce tu puesto de trabajo!\n\nDa clic en cada elemento que veas
+  - requiredType: 0
+    text: "\xA1Conoce tu puesto de trabajo!\n\nDa clic en cada elemento que veas
       para familiarizarte con ellos."
     timeInScreen: 5
     audio: {fileID: 0}
+    imageIndex: 0

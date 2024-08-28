@@ -23,8 +23,7 @@ public class BaseController : MonoBehaviour
     {
         if (_baseView != null)
         {
-            
-        return _baseView.GetCanvasGroup() == null ? null : _baseView.GetCanvasGroup();
+            return _baseView.GetCanvasGroup() == null ? null : _baseView.GetCanvasGroup();
         }
         else
         {
