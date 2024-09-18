@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class CountDownController : BaseController
 {
     [SerializeField] private CountDownView _view;
+    public static Action onCompleteTimer;
     
     public override void Init()
     {
@@ -13,6 +15,7 @@ public class CountDownController : BaseController
     public override void OnStart()
     {
         base.OnStart();
-        _view.InitCountDown();
+        _view.InitCountDown(onCompleteTimer);
+        onCompleteTimer = null;
     }
 }

@@ -1,0 +1,4 @@
+namespace MedeaInteractiva.Scripts.Interfaces
+{
+    
+}

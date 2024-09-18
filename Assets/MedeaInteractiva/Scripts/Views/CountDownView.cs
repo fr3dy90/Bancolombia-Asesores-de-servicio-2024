@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
@@ -11,15 +12,15 @@ public class CountDownView : BaseView
    [SerializeField] private int _countDown;
    
 
-   public void InitCountDown()
+   public void InitCountDown(Action onComplete)
    {
       _canvasGroup.alpha = 0;
       _textCountDown.text = _countDown.ToString();
       _background.fillAmount = 1;
-      CountDown();
+      CountDown(onComplete);
    }
    
-   private async UniTask CountDown()
+   private async UniTask CountDown(Action OnComplete)
    {
        int countDown = _countDown;
        bool fill = true;
@@ -45,5 +46,6 @@ public class CountDownView : BaseView
            _background.fillClockwise = fill;
            countDown--;
        }
+       OnComplete?.Invoke();
    }
 }

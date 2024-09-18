@@ -13,6 +13,6 @@ public class WelcomeController : BaseController
    private async void Launch()
    {
       await UniTask.WaitForSeconds(3);
-      await BsseSceneController.Instance.ChangeState(UIState.Menu);
+      await BaseSceneController.Instance.ChangeState(UIState.Menu);
    }
 }

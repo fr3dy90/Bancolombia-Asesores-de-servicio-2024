@@ -35,6 +35,6 @@ public class CinematicController : BaseController
 
    public void ChangeState()
    {
-      BsseSceneController.Instance.ChangeState(UIState.Welcome);
+      BaseSceneController.Instance.ChangeState(UIState.Welcome);
    }
 }

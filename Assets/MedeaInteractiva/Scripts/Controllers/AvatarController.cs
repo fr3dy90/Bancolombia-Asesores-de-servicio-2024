@@ -35,7 +35,7 @@ public class AvatarController : BaseController
 
    private void MateoEntrance()
    {
-      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23, ()=> BsseSceneController.Instance.ChangeState(UIState.Cinematic));
+      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23, ()=> BaseSceneController.Instance.ChangeState(UIState.Cinematic));
    }
    
    

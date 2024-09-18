@@ -29,8 +29,8 @@ public class MainMenuView : BaseView
             _buttons[i].GetComponent<Button>().onClick.AddListener(
                () =>
                {
-                   BsseSceneController.Instance._currentMenuState = (MainMenu)i1;
-                   BsseSceneController.Instance.ChangeState(UIState.ModalIntro);
+                   BaseSceneController.Instance._currentMenuState = (MainMenu)i1;
+                   BaseSceneController.Instance.ChangeState(UIState.ModalIntro);
                }
            );
         }

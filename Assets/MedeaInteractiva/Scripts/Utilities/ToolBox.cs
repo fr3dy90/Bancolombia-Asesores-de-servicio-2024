@@ -3,7 +3,8 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 
-public static class ToolBox
+public static class 
+    ToolBox
 {
     private const int ZERO = 0;
     private const int ONE = 1;
@@ -131,5 +132,28 @@ public static class ToolBox
         await (UniTask.WaitUntil(()=> avatar._videoAvatar.time > stopTime));
         avatar._videoAvatar.Pause();
     }
+
+    public static void SetSceneTransforms(StrDropZone dropZone, Camera cam, float _zOffset, float factor)
+    {
+        Ray ray = cam.ScreenPointToRay(dropZone.dropZoneUI.position);
+        
+        dropZone.dropZoneCollider.transform.position = ray.direction * _zOffset + cam.transform.position;
+        
+
+        // Escalar el collider en función de la distancia y el tamaño de la UI
+        float distance = Vector3.Distance(cam.transform.position, dropZone.dropZoneCollider.transform.position);
+        Vector2 uiSize = dropZone.dropZoneUI.rect.size;
+        
+        // Relacionar la escala del collider con el tamaño de la UI y la distancia
+        Vector3 colliderScale = new Vector3(uiSize.x * distance / factor, uiSize.y * distance / factor, uiSize.x * distance / factor);
+        dropZone.dropZoneCollider.transform.localScale = colliderScale;
+    }
+
+    public static Vector3 SetItemPosition(RectTransform spawnPoint, Camera cam, float zOffset)
+    {
+        Ray ray = cam.ScreenPointToRay(spawnPoint.position);
+        return ray.direction * zOffset + cam.transform.position;
+    }
+    
     
 }

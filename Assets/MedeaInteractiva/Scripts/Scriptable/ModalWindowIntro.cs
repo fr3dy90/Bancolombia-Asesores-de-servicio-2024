@@ -1,8 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "ModalWindowIntro", menuName = "Scriptable Objects/ModalWindowIntro")]
+[CreateAssetMenu(fileName = "ModalWindowIntro", menuName = "Medea Interactiva/ModalWindowIntro")]
 public class ModalWindowIntro : ScriptableObject
 {
     public Sprite modalSprite;
@@ -13,6 +12,7 @@ public class ModalWindowIntro : ScriptableObject
 public class ModalContent
 {
     public UIType requiredType;
+    public ShowInfo showInfo;
     [TextArea(3, 3)] public string text;
     public float timeInScreen;
     public AudioClip audio;
@@ -20,8 +20,4 @@ public class ModalContent
     public int imageIndex;
 }
 
-public enum UIType
-{
-    Standard,
-    Images
-}
+

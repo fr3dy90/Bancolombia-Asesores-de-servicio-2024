@@ -12,7 +12,7 @@ public class MainMenuController : BaseController
     public override void OnStart()
     {
         base.OnStart();
-        _view.OnSetMenuState(BsseSceneController.Instance._currentMenuState);
+        _view.OnSetMenuState(BaseSceneController.Instance._currentMenuState);
     }  
 }
 

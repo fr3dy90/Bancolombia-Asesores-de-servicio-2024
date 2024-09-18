@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d96e32222dd4a8a45b4031b81917bc1a, type: 3}
+  m_Name: Color Library
+  m_EditorClassIdentifier: 
+  modalIntroView_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  modalIntroView_UnselectedColor: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.078431375}
+  itemInfo_ViewColor: {r: 0.9882353, g: 0.8509804, b: 0.1254902, a: 1}
+  itemInfo_UnviewColor: {r: 1, g: 1, b: 1, a: 1}

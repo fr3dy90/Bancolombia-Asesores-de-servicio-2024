@@ -1,7 +1,8 @@
 using Cysharp.Threading.Tasks;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
+using Button = UnityEngine.UI.Button;
+using Image = UnityEngine.UI.Image;
 
 public class ModalIntroView : BaseView
 {
@@ -9,6 +10,8 @@ public class ModalIntroView : BaseView
     [SerializeField] private Image _imgIconMoment;
     [SerializeField] private TextMeshProUGUI _textContent;
     [SerializeField] private Button _btnContinue;
+    [SerializeField] private Image[] _showInfoImg;
+
     
     [Header("Image UI")]
     [SerializeField] private TextMeshProUGUI _alternativeText;
@@ -20,6 +23,7 @@ public class ModalIntroView : BaseView
         foreach (ModalContent content in modalWindowIntro.modalContent)
         {
             SetUI(content.requiredType);
+            SetShowInfo(content.showInfo);
             
             _btnContinue.gameObject.SetActive(false);
             _textContent.text = content.text;
@@ -37,6 +41,23 @@ public class ModalIntroView : BaseView
     {
         _textContent.gameObject.SetActive(uiRequired == UIType.Standard);
         _alternativeText.gameObject.SetActive(uiRequired == UIType.Images);
+    }
+
+    private void SetShowInfo(ShowInfo info)
+    {
+       
+        _showInfoImg[0].color = ColorManager.Instance.colorLibrary.modalIntroView_UnselectedColor;
+        _showInfoImg[1].color = ColorManager.Instance.colorLibrary.modalIntroView_UnselectedColor;
+        
+        switch (info)
+        {
+            case ShowInfo.Intro:
+                _showInfoImg[0].color = ColorManager.Instance.colorLibrary.modalIntroView_SelectedColor;
+                break;
+            case ShowInfo.Instructions:
+                _showInfoImg[1].color = ColorManager.Instance.colorLibrary.modalIntroView_SelectedColor;
+                break;
+        }
     }
 
     private void SetImage(int index)

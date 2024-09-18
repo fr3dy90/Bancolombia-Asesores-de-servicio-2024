@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e64d9b0e1e2e0246b5a86dd5da1074a, type: 3}
+  m_Name: Clasifica
+  m_EditorClassIdentifier: 
+  modalSprite: {fileID: 2041561270, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  modalContent:
+  - requiredType: 0
+    showInfo: 1
+    text: "Clasificar y darle un orden a las herramientas que har\xE1n parte de tu
+      d\xEDa es fundamental para que puedas ejercer de forma adecuada tu rol y prestar
+      un servicio memorable para nuestros clientes."
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 0
+  - requiredType: 0
+    showInfo: 1
+    text: "Siempre debes actuar de forma \xE1gil y oportuna; por eso, en este reto
+      el tiempo ser\xE1 un factor determinante para que puedas obtener m\xE1s puntos."
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 0
+  - requiredType: 0
+    showInfo: 1
+    text: "\xA1La preparaci\xF3n es la base para ofrecer un excelente servicio!"
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 0
+  - requiredType: 1
+    showInfo: 2
+    text: "Clasifica las diferentes herramientas que se encuentran en tu puesto de
+      trabajo (Dispositivos, Seguridad o Papeler\xEDa)"
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 1
+  - requiredType: 1
+    showInfo: 2
+    text: Recibe puntos con cada acierto, avanza y demuestra tu conocimiento.
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 2

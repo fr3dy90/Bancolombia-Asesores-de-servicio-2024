@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98405ed800b0bf54d9396a69f2bb76d4, type: 3}
+  m_Name: Sellos
+  m_EditorClassIdentifier: 
+  actualCategory: 1
+  isViewed: 0
+  itemName: 'Sellos:'
+  itemDescription: "usados\_para\_estampar\_un mensaje en los documentos asociados
+    con las diferentes transacciones, con el fin de certificarlos. Algunos son \no
+    Sello Recibido sin pago.\r\no Sello Recibido con pago.\r\no Sello Recibido pagado.\r\no
+    Sello de Canje."
+  spriteItem: {fileID: 21300000, guid: 1eeb96603cd8808439303b6637c333f5, type: 3}

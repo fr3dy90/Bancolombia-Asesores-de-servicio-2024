@@ -15,6 +15,15 @@ MonoBehaviour:
   modalSprite: {fileID: 635973903, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
   modalContent:
   - requiredType: 0
+    showInfo: 1
+    text: "Conocer para qu\xE9 sirve cada uno de los elementos\r\nes fundamental
+      para desarrollar de manera correcta y segura los\r\nprocesos asociados a tu
+      rol."
+    timeInScreen: 5
+    audio: {fileID: 0}
+    imageIndex: 0
+  - requiredType: 0
+    showInfo: 2
     text: "\xA1Conoce tu puesto de trabajo!\n\nDa clic en cada elemento que veas
       para familiarizarte con ellos."
     timeInScreen: 5
