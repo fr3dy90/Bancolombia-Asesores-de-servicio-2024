@@ -20,7 +20,7 @@ public class ConoceController : BaseController
 
    public void OnStart()
    {
-      
+      base.OnStart();
    }
 
    private void OnSetItems()

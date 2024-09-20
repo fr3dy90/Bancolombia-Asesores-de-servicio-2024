@@ -1,22 +1,27 @@
-using System;
-using MedeaInteractiva.Scripts.Interfaces;
 using UnityEngine;
 
-public class Item : MonoBehaviour, IDraggable
+[RequireComponent(typeof(BoxCollider))]
+public class Item : MonoBehaviour
 {
-    [SerializeField] private Camera _cam;
     [SerializeField] private ItemInfo _info;
     [SerializeField] private Vector3 _startPosition;
-    [SerializeField] private ClasificaController _controller;
-    private Vector3 offset;
-    public bool isDraggin {get; private set; }
+    [SerializeField] private Interaction _controller;
+    [SerializeField] private DragAndDropManager _dragAndDropManager;
+    [SerializeField] private BoxCollider _boxCollider;
+    [SerializeField] private LayerMask _colLayerMask;
+    public Option _currentOprion { private set; get;}
 
-    public void InitItem(Vector3 startPosition, Camera camera, ClasificaController controller)
+
+    private void Awake()
+    {
+        _boxCollider = GetComponent<BoxCollider>();
+    }
+
+    public void InitItem(Vector3 startPosition, Camera camera, Interaction controller)
     {
         _controller = controller;
-        _cam = camera;
         _startPosition = startPosition;
-        transform.position = _startPosition;
+        SetStartPosition();
     }
     
     public string GetName()
@@ -29,42 +34,55 @@ public class Item : MonoBehaviour, IDraggable
         return _info.actualCategory;
     }
 
-    private void OnMouseDown()
+    public string GetItemInfo()
     {
-        isDraggin = true;
-        Vector3 mouseWorldPosition = _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.WorldToScreenPoint(transform.position).z));
-        offset = transform.position - mouseWorldPosition;
-    }
-
-    private void OnMouseUp()
-    {
-        isDraggin = false;
-        transform.position = _startPosition;
-    }
-
-
-    public void OnStartDrag()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnEndDrag(bool isSucces)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    private void Update()
-    {
-        if (isDraggin)
+        if (string.IsNullOrEmpty(_info.itemDescriptionConecta) ||
+            string.IsNullOrWhiteSpace(_info.itemDescriptionConecta))
         {
-            Vector3 mouseWorldPosition = _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.WorldToScreenPoint(transform.position).z));
-            transform.position = offset + mouseWorldPosition;
+            return _info.itemDescription;
+        }
+        else
+        {
+            return _info.itemDescriptionConecta;
         }
     }
 
-    public void OnSuccessfullDrop(Category dropZoneCategory)
+    public void SetStartPosition()
     {
-        bool isMatch = _info.actualCategory == dropZoneCategory;
-        _controller.ReportDropResult(this, isMatch, dropZoneCategory);
+        transform.position = _startPosition;
+    }
+
+    private void OnMouseDown()
+    {
+        _dragAndDropManager.DragItem(this);
+    }
+
+    private void OnSuccessfullDrop(DropZone dropZoneCategory)
+    {
+        _controller.ReportDropResult(this, dropZoneCategory);
+    }
+    
+    public void Released()
+    {
+        Vector3 worldCenter = _boxCollider.transform.TransformPoint(_boxCollider.center);
+        Vector3 worldHalfExtends = Vector3.Scale(_boxCollider.size, _boxCollider.transform.lossyScale) / 2;
+        Quaternion worldRotation = _boxCollider.transform.rotation;
+        Collider[] colliders = Physics.OverlapBox(worldCenter, worldHalfExtends, worldRotation, _colLayerMask);
+
+        foreach (Collider col in colliders)
+        {
+            if(col.GetComponent<DropZone>() != null)
+            {
+                OnSuccessfullDrop(col.GetComponent<DropZone>());
+                return;
+            }
+        }
+        
+        SetStartPosition();
+    }
+
+    public void SetOption(Option selectedOption)
+    {
+        _currentOprion = selectedOption;
     }
 }

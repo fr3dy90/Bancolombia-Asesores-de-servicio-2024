@@ -12,7 +12,8 @@ public enum UIState
     CountDown,
     Retroalimentation,
     Conoce,
-    Clasifica
+    Clasifica,
+    Conecta
 }
 
 public enum MainMenu
@@ -41,6 +42,13 @@ public enum Category
     Dispositivos,
     Seguridad,
     Papeleria
+}
+
+public enum Option
+{
+    OptionA,
+    OptionB,
+    OptionC
 }
 
 [Serializable]

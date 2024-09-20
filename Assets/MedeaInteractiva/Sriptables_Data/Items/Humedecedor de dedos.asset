@@ -17,3 +17,10 @@ MonoBehaviour:
   itemName: Humedecedor de dedos
   itemDescription: Te ayuda a agilizar el conteo de los billetes facilitando su agarre.
   spriteItem: {fileID: 21300000, guid: e1c238a050286f24e8a70bd51930d11d, type: 3}
+  itemDescriptionConecta: 'Agiliza el conteo de los billetes facilitando
+
+    su
+    agarre.
+
+'
+  CurrentOption: 0

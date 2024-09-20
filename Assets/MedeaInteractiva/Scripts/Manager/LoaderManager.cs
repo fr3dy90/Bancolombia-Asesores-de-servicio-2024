@@ -8,8 +8,6 @@ public class LoaderManager: MonoBehaviour
     [SerializeField] public float _fillDuration;
     [SerializeField] public float _elapsedTime = 0;
     [SerializeField] public bool _isFilling = false;
-    [SerializeField] private DropZone lastDrop;
-    public static Action<DropZone> onDroppedObj;
     
     private void Update()
     {
@@ -17,7 +15,6 @@ public class LoaderManager: MonoBehaviour
         {
             _elapsedTime = 0;
             _imgLoader.fillAmount = 0;
-            lastDrop = null;
             return;
         }
             
@@ -30,14 +27,8 @@ public class LoaderManager: MonoBehaviour
             {
                 _isFilling = false;
                 _elapsedTime = 0;
-                onDroppedObj?.Invoke(lastDrop);
-                lastDrop = null;
+          
             }
         }
-    }
-
-    public void GetDropZone(DropZone dz)
-    {
-        lastDrop = dz;
     }
 }

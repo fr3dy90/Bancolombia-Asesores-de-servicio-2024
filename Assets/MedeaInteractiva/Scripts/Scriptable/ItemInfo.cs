@@ -9,5 +9,8 @@ public class ItemInfo : ScriptableObject
     [TextArea(3,3)]
     public string itemDescription;
     public Sprite spriteItem;
+    [TextArea(3, 4)] 
+    public string itemDescriptionConecta;
+    public Option CurrentOption;
 }
 

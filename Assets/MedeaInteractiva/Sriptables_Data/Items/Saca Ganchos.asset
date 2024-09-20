@@ -15,5 +15,8 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: Saca ganchos
-  itemDescription: 
+  itemDescription: "Si debemos separar alg\xFAn documento\ny deshacernos de su gancho,
+    es ideal\nusar este objeto."
   spriteItem: {fileID: 0}
+  itemDescriptionConecta: 
+  CurrentOption: 0

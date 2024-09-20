@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualCategory: 1
   isViewed: 0
-  itemName: 'Cofre:'
+  itemName: Cofre
   itemDescription: Utilizado para custodiar temporalmente los fajos de billetes durante
     la jornada laboral.
   spriteItem: {fileID: 21300000, guid: b3437eed1f98d54479b1b26e19fac060, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

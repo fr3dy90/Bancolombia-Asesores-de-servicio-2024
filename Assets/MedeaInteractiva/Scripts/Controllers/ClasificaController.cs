@@ -1,22 +1,12 @@
 using System;
 using UnityEngine;
 
-public class ClasificaController : BaseController
+public class ClasificaController : Interaction
 {
-    [SerializeField] private Camera _mainCamera;
-    [SerializeField] private StrDropZone _dropZoneDispositivos;
-    [SerializeField] private StrDropZone _dropZoneSeguridad;
-    [SerializeField] private StrDropZone _dropZonePapeleria;
-    [SerializeField] private RectTransform _spawnPoint;
-    
     [SerializeField] private ClasificaView _view;
     [SerializeField] private int _currentIndex;
     [SerializeField] private float _currentTime;
     [SerializeField] private bool _isTimer = false;
-    
-    [Range(.5f, 5f)] public float _zOffset = 5f;
-    [Range(100f, 2000)] public float factor;
-    public bool test;
     
     [SerializeField] private float _dispositivosCounter;
     [SerializeField] private float _seguridadCounter;
@@ -42,9 +32,6 @@ public class ClasificaController : BaseController
     public override void OnStart()
     {
         base.OnStart();
-        ToolBox.SetSceneTransforms(_dropZoneDispositivos, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZoneSeguridad, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZonePapeleria, _mainCamera, _zOffset, factor);
 
         _dispositivosCounter = 0;
         _seguridadCounter = 0;
@@ -64,7 +51,7 @@ public class ClasificaController : BaseController
         {
             Item curretnItem = ObjectManager.Instance.GetItem(_currentIndex);
             _view.SetName(curretnItem.name);
-            curretnItem.InitItem(ToolBox.SetItemPosition(_spawnPoint, _mainCamera, _zOffset), _mainCamera, this);
+            curretnItem.InitItem(ToolBox.SetItemPosition(_spawnPoint[0], _mainCamera, _zOffset), _mainCamera, this);
             curretnItem.gameObject.SetActive(true);
             _currentIndex++;
         }
@@ -86,16 +73,16 @@ public class ClasificaController : BaseController
         
         if(!test) return;
         
-        ToolBox.SetSceneTransforms(_dropZoneDispositivos, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZoneSeguridad, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZonePapeleria, _mainCamera, _zOffset, factor);
+        base.SetColliders();
     }
 
-    public void ReportDropResult(Item item, bool isMatch, Category dropZoneCategory)
+    public override void ReportDropResult(Item item,  DropZone dropZoneCategory)
     {
+        bool isMatch = item.GetCategory() == dropZoneCategory._dropCategory;
+        item.gameObject.SetActive(false);
         if (isMatch)
         {
-            switch (dropZoneCategory)
+            switch (dropZoneCategory._dropCategory)
             {
                 case Category.Dispositivos:
                     _dispositivosCounter++;

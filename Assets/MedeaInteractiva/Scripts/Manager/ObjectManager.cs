@@ -8,6 +8,9 @@ public class ObjectManager : MonoBehaviour
 {
    public static ObjectManager Instance;
    [SerializeField] private List<Item> _objects;
+   [SerializeField] private List<Item> _dispositivos;
+   [SerializeField] private List<Item> _seguridad;
+   [SerializeField] private List<Item> _papeleria;
 
    private void Awake()
    {
@@ -43,5 +46,16 @@ public class ObjectManager : MonoBehaviour
    public int GetObjsCount()
    {
       return _objects.Count;
+   }
+
+   public List<Item> GetItems(Category currentCategory)
+   {
+      Random random = new Random();
+      return currentCategory switch
+      {
+         Category.Dispositivos =>  _dispositivos = _dispositivos.OrderBy(x => random.Next()).ToList(),
+         Category.Papeleria => _papeleria = _papeleria.OrderBy(x => random.Next()).ToList(),
+         Category.Seguridad => _seguridad = _seguridad.OrderBy(x => random.Next()).ToList()
+      };
    }
 }

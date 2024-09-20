@@ -18,3 +18,7 @@ MonoBehaviour:
   itemDescription: Se utiliza para entintar el dedo de la mano y dejar su hulla registrada
     en alguno de los documentos que deba dejar el cliente al Banco como soporte.
   spriteItem: {fileID: 21300000, guid: adfb448637deb7e45b6085465c037dc3, type: 3}
+  itemDescriptionConecta: "Utilizado para tomar la impresi\xF3n de la huella dactilar\ndel
+    cliente y se utiliza principalmente cuando los\nclientes van a retirar con un
+    cheque m\xE1s\nde un mill\xF3n de pesos."
+  CurrentOption: 0

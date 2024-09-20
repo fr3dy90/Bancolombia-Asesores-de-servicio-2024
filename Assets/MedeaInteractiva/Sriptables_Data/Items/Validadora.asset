@@ -15,5 +15,13 @@ MonoBehaviour:
   actualCategory: 0
   isViewed: 0
   itemName: Validadora
-  itemDescription: Timbra los soportes de las transacciones realizadas por los clientes.
+  itemDescription: 'Timbra los soportes de las
+
+    transacciones realizadas por
+    los clientes.'
   spriteItem: {fileID: 0}
+  itemDescriptionConecta: 'Imprime los soportes de las
+
+    transacciones realizadas
+    por los clientes.'
+  CurrentOption: 0

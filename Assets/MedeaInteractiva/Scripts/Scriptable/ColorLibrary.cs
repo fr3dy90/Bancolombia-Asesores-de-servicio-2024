@@ -10,4 +10,9 @@ public class ColorLibrary : ScriptableObject
     [Header("Item Color")] 
     public Color itemInfo_ViewColor;
     public Color itemInfo_UnviewColor;
+
+    [Header("Answers")] 
+    public Color NormalColor;
+    public Color correctColor;
+    public Color incorrectColor;
 }

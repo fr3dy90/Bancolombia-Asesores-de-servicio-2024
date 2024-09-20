@@ -15,5 +15,9 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: Validadora
-  itemDescription: Timbra los soportes de las transacciones realizadas por los clientes.
+  itemDescription: 'Usando este elemento podemos unir
+
+    cualquier tipo de documentos.'
   spriteItem: {fileID: 0}
+  itemDescriptionConecta: 
+  CurrentOption: 0
