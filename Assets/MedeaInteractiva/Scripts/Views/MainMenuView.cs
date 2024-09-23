@@ -6,17 +6,23 @@ public class MainMenuView : BaseView
 {
     [SerializeField] private Button[] _buttons;
     [SerializeField] private Image _imgInicia;
+    public static bool Completed = false ;
     
     public void OnSetMenuState(MainMenu menuState)
     {
-       _buttons[(int)menuState].GameObject().SetActive(true);
-       _imgInicia.transform.parent = _buttons[(int)menuState].transform;
-       _imgInicia.rectTransform.localPosition = new Vector2(0, _imgInicia.rectTransform.localPosition.y);
-       for (int i = 0; i < _buttons.Length; i++)
-       {
-           _buttons[i].interactable = (int)menuState >= i;
-       }
+        if (!Completed)
+        {   
+           _buttons[(int)menuState].GameObject().SetActive(true);
+           _imgInicia.transform.parent = _buttons[(int)menuState].transform;
+           _imgInicia.rectTransform.localPosition = new Vector2(0, _imgInicia.rectTransform.localPosition.y);
+           
+           for (int i = 0; i < _buttons.Length; i++)
+           {
+               _buttons[i].interactable = (int)menuState >= i;
+           }
+        }
        
+        _imgInicia.gameObject.SetActive(!Completed);
        InitializeButtons();
     }
 
@@ -34,5 +40,15 @@ public class MainMenuView : BaseView
                }
            );
         }
+        
+        _buttons[3].onClick.RemoveAllListeners();
+        _buttons[3].onClick.AddListener(
+            () =>
+            {
+                BaseSceneController.Instance._currentMenuState = MainMenu.Preparate;
+                AvatarController.CurrentMoment = AvatarMoment.Retate;
+                BaseSceneController.Instance.ChangeState(UIState.Avatar);
+            }
+        );
     }
 }

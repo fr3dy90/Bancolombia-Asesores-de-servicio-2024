@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e7d25bdbea457db4fb4bb69a7ed79c0d, type: 3}
-  m_Name: ClasificaRetroBien_1
+  m_Name: CobectaClasificaRetro_Salida
   m_EditorClassIdentifier: 
   modalContent:
   - actualUIType: 0
@@ -18,13 +18,5 @@ MonoBehaviour:
     titleText: "\xA1Felicitaciones!"
     retroalimentationText: "Has logrado superar este\r\nreto. Contin\xFAa la experiencia\r\ny
       aprende m\xE1s sobre tu\r\npuesto de trabajo"
-    _audioClip: {fileID: 0}
-    _timeInScreen: 5
-  - actualUIType: 1
-    isGood: 1
-    titleText: "\xA1Felicitaciones!"
-    retroalimentationText: "Clasificaste\r\ncorrectamente los\r\nobjetos, pero tu
-      tiempo\r\npudo ser mejor\r\n\xA1Recuerda que la\r\nagilidad y oportunidad\r\nson
-      fundamentales en tu\r\n\rrol! "
     _audioClip: {fileID: 0}
     _timeInScreen: 5

@@ -42,7 +42,11 @@ public class ConectaView: BaseView
                 Category.Seguridad => "3"
             };
             _textIntro.text = $"{nivel} {cat}";
-        
+
+            _txtOption_A.text = "";
+            _txtOption_B.text = "";
+            _txtOption_C.text = "";
+
     }
 
     public void SetAnswerText(int index, string answer)

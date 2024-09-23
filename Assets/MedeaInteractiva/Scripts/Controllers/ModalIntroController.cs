@@ -22,8 +22,14 @@ public class ModalIntroController : BaseController
        
       _modalWindowIntros[2].modalContent[3].buttonAction = ()=>
       {
-         BaseSceneController.Instance.ChangeState(UIState.Menu);
+         BaseSceneController.Instance.ChangeState(UIState.Conecta);
       };
+
+      _modalWindowIntros[3].modalContent[0].buttonAction = () =>
+      {
+         BaseSceneController.Instance.ChangeState(UIState.Retate);
+      };
+      
       _view = GetComponentInChildren<ModalIntroView>();
    }
    

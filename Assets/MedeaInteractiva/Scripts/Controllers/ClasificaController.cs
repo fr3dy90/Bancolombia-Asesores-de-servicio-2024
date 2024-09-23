@@ -11,6 +11,8 @@ public class ClasificaController : Interaction
     [SerializeField] private float _dispositivosCounter;
     [SerializeField] private float _seguridadCounter;
     [SerializeField] private float _papeleriaCounter;
+
+    [SerializeField] private Vector3 _itemScale;
     
     private const float DISPOSITIVOS_MAX = 5;
     private const float SEGURIDAD_MAX = 7;
@@ -19,6 +21,8 @@ public class ClasificaController : Interaction
 
     private const int MAX_STARTS = 12;
     private const float MAX_TIME = 120;
+    
+    
         
     public override void Init()
     {
@@ -32,6 +36,7 @@ public class ClasificaController : Interaction
     public override void OnStart()
     {
         base.OnStart();
+        EnableColliders();
 
         _dispositivosCounter = 0;
         _seguridadCounter = 0;
@@ -50,8 +55,10 @@ public class ClasificaController : Interaction
         if (_currentIndex < ObjectManager.Instance.GetObjsCount())
         {
             Item curretnItem = ObjectManager.Instance.GetItem(_currentIndex);
-            _view.SetName(curretnItem.name);
+            _view.SetName(curretnItem._info.itemName);
             curretnItem.InitItem(ToolBox.SetItemPosition(_spawnPoint[0], _mainCamera, _zOffset), _mainCamera, this);
+
+            curretnItem.transform.localScale = _itemScale;
             curretnItem.gameObject.SetActive(true);
             _currentIndex++;
         }
@@ -122,6 +129,7 @@ public class ClasificaController : Interaction
             RetroalimentationController.SelectedRetro = 0;
         }
 
+        RetroalimentationController.ActualUIState = MainMenu.Clasifica;
         BaseSceneController.Instance.ChangeState(UIState.Retroalimentation);
     }
 }

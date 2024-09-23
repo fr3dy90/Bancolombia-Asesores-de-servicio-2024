@@ -1,20 +1,22 @@
+using System;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(SphereCollider))]
 public class Item : MonoBehaviour
 {
-    [SerializeField] private ItemInfo _info;
+    [SerializeField] public ItemInfo _info;
     [SerializeField] private Vector3 _startPosition;
-    [SerializeField] private Interaction _controller;
-    [SerializeField] private DragAndDropManager _dragAndDropManager;
-    [SerializeField] private BoxCollider _boxCollider;
+    [SerializeField] public Interaction _controller;
+    [SerializeField] public DragAndDropManager _dragAndDropManager;
+    [SerializeField] private SphereCollider _sphereCollider;
     [SerializeField] private LayerMask _colLayerMask;
+    [SerializeField] private float _rotationSpeed;
     public Option _currentOprion { private set; get;}
 
 
     private void Awake()
     {
-        _boxCollider = GetComponent<BoxCollider>();
+        _sphereCollider = GetComponent<SphereCollider>();
     }
 
     public void InitItem(Vector3 startPosition, Camera camera, Interaction controller)
@@ -64,11 +66,10 @@ public class Item : MonoBehaviour
     
     public void Released()
     {
-        Vector3 worldCenter = _boxCollider.transform.TransformPoint(_boxCollider.center);
-        Vector3 worldHalfExtends = Vector3.Scale(_boxCollider.size, _boxCollider.transform.lossyScale) / 2;
-        Quaternion worldRotation = _boxCollider.transform.rotation;
-        Collider[] colliders = Physics.OverlapBox(worldCenter, worldHalfExtends, worldRotation, _colLayerMask);
-
+        Vector3 worldCenter = _sphereCollider.transform.TransformPoint(_sphereCollider.center);
+        float worldRadius = _sphereCollider.radius * Mathf.Max(_sphereCollider.transform.lossyScale.x,
+            _sphereCollider.transform.lossyScale.y, _sphereCollider.transform.lossyScale.z);
+        Collider[] colliders = Physics.OverlapSphere(worldCenter, worldRadius, _colLayerMask); 
         foreach (Collider col in colliders)
         {
             if(col.GetComponent<DropZone>() != null)
@@ -84,5 +85,28 @@ public class Item : MonoBehaviour
     public void SetOption(Option selectedOption)
     {
         _currentOprion = selectedOption;
+    }
+
+    private void Update()
+    {
+        transform.Rotate(0f, _rotationSpeed * Time.deltaTime, 0f);
+    }
+
+    void OnDrawGizmos()
+    {
+        SphereCollider sphereCollider = GetComponent<SphereCollider>();
+        if (sphereCollider != null)
+        {
+            Gizmos.color = Color.red;
+
+            Vector3 worldCenter = sphereCollider.transform.TransformPoint(sphereCollider.center);
+            float worldRadius = sphereCollider.radius * Mathf.Max(
+                sphereCollider.transform.lossyScale.x,
+                sphereCollider.transform.lossyScale.y,
+                sphereCollider.transform.lossyScale.z
+            );
+
+            Gizmos.DrawWireSphere(worldCenter, worldRadius);
+        }
     }
 }

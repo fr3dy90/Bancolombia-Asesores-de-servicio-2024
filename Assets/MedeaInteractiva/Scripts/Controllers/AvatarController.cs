@@ -11,6 +11,8 @@ public class AvatarController : BaseController
    
    private const string MAT_ALPHA = "_GlobalAlpha";
    private const float ZERO = 0;
+
+   public static AvatarMoment CurrentMoment;
    
    public override void Init()
    {
@@ -27,9 +29,48 @@ public class AvatarController : BaseController
    public override void OnStart()
    {
       base.OnStart();
+      switch (CurrentMoment)
+      {
+         case AvatarMoment.Intro:
+            
+            AvatarIntro();
+            break;
+         case AvatarMoment.Retate:
+            AvatarRetate();
+            break;
+         case AvatarMoment.Exit:
+            AvatarExit();
+            break;
+      }
+   }
+
+  
+
+   private void AvatarRetate()
+   {
+      ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
+      {
+         ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 40f, 59f, () => BaseSceneController.Instance.ChangeState(UIState.ModalIntro));
+      });
+   }
+
+   private void AvatarIntro()
+   {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
          ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 0f, 16f, MateoEntrance);
+      });
+   }
+   
+   private void AvatarExit()
+   {
+      ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
+      {
+         ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA, 23f, 37f, () =>
+         {
+            ToolBox.SimpleFade(1, .5f, _baseView.GetCanvasGroup(),
+               () => BaseSceneController.Instance.ChangeState(UIState.Menu));
+         });
       });
    }
 

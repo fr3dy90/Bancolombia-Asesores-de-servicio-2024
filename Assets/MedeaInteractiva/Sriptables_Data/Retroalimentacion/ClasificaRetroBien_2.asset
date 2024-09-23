@@ -24,6 +24,6 @@ MonoBehaviour:
     isGood: 1
     titleText: "\xA1Felicitaciones!"
     retroalimentationText: "\xA1Muy bien!\n\r\nHas finalizado este\r\nreto, demostrando\r\nque
-      conoces\r\nintegralmente tu\r\n\r\ntrabajo."
+      conoces\r\nintegralmente tu\r\n\rtrabajo."
     _audioClip: {fileID: 0}
     _timeInScreen: 5

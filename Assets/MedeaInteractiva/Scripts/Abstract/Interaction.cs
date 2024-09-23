@@ -29,6 +29,13 @@ public abstract class Interaction: BaseController
         ToolBox.SetSceneTransforms(_dropZoneOpt_B, _mainCamera, _zOffset, factor);
         ToolBox.SetSceneTransforms(_dropZoneOpt_C, _mainCamera, _zOffset, factor);
     }
+
+    protected void EnableColliders()
+    {
+        _dropZoneOpt_A.dropZoneCollider.enabled = true;
+        _dropZoneOpt_B.dropZoneCollider.enabled = true;
+        _dropZoneOpt_C.dropZoneCollider.enabled = true;
+    }
     
     public abstract void ReportDropResult(Item item, DropZone dropZoneCategory);
 }

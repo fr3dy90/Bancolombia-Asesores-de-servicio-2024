@@ -1,5 +1,7 @@
 using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public enum UIState
 {
@@ -13,7 +15,8 @@ public enum UIState
     Retroalimentation,
     Conoce,
     Clasifica,
-    Conecta
+    Conecta,
+    Retate
 }
 
 public enum MainMenu
@@ -51,9 +54,23 @@ public enum Option
     OptionC
 }
 
+public enum AvatarMoment
+{
+    Intro,
+    Retate,
+    Exit
+}
+
 [Serializable]
 public struct StrDropZone
 {
     public RectTransform dropZoneUI;
     public Collider dropZoneCollider;
+}
+
+[Serializable]
+public struct AnswerUI
+{
+    public TextMeshProUGUI textAnswer;
+    public Image containerUI;
 }
