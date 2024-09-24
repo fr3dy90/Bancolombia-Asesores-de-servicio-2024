@@ -103,7 +103,7 @@ public static class
         onComplete?.Invoke();
     }
     
-    public static async void PlayAvatar(Avatar avatar, string MAT_ALPHA, float startTime, float stopTime, Action onComplete = null)
+    public static async void PlayAvatar(Avatar avatar, string MAT_ALPHA, float startTime, float stopTime, Material _matAvatar,Action onComplete = null)
     {
         if (startTime >= 0 && startTime < avatar._videoAvatar.length)
         {
@@ -115,14 +115,14 @@ public static class
             Debug.LogWarning($"Check video time", avatar._videoAvatar.gameObject);
         }
       
-        if (avatar._videoAvatar.gameObject.GetComponent<RawImage>().material.GetFloat(MAT_ALPHA) <= .1f)
+        if (_matAvatar.GetFloat(MAT_ALPHA) <= .1f)
         {
-            await FadeAvatar(avatar._matAvatar, MAT_ALPHA, ZERO, .8f);
+            await FadeAvatar(_matAvatar, MAT_ALPHA, ZERO, .8f);
         }
 
         await StopVideo(avatar, stopTime);
       
-        await FadeAvatar(avatar._matAvatar, MAT_ALPHA, ONE, .8f);
+        await FadeAvatar(_matAvatar, MAT_ALPHA, ONE, .8f);
 
         onComplete?.Invoke();
     }

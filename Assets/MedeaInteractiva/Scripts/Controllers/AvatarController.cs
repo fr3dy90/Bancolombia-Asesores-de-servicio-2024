@@ -54,7 +54,7 @@ public class AvatarController : BaseController
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
-         ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 40f, 59f, () => BaseSceneController.Instance.ChangeState(UIState.ModalIntro));
+         ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 40f, 59f, _avatarMarcela._matAvatar, () => BaseSceneController.Instance.ChangeState(UIState.ModalIntro));
       });
    }
 
@@ -62,7 +62,7 @@ public class AvatarController : BaseController
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
-         ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 0f, 16f, MateoEntrance);
+         ToolBox.PlayAvatar(_avatarMarcela, MAT_ALPHA, 0f, 16f, _avatarMarcela._matAvatar, MateoEntrance);
       });
    }
    
@@ -70,7 +70,7 @@ public class AvatarController : BaseController
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
-         ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA, 23f, 37f, () =>
+         ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA, 23f, 37f, _avatarMateo._matAvatar,() =>
          {
             ToolBox.SimpleFade(1, .5f, _baseView.GetCanvasGroup(),
                () => BaseSceneController.Instance.ChangeState(UIState.Menu));
@@ -80,7 +80,7 @@ public class AvatarController : BaseController
 
    private void MateoEntrance()
    {
-      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23, ()=> BaseSceneController.Instance.ChangeState(UIState.Cinematic));
+      ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA,15f, 23, _avatarMateo._matAvatar, ()=> BaseSceneController.Instance.ChangeState(UIState.Cinematic));
    }
    
    
