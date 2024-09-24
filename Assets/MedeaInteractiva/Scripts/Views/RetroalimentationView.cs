@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class RetroalimentationView : BaseView
 {
-    [Header("Standar UI")]
+
+
+    [Header("Standar UI")] 
+    [SerializeField] private Image _iconMoment;
     [SerializeField] private Image _icon; 
     [SerializeField] private Sprite _spriteGood;
     [SerializeField] private Sprite _spritebad;
@@ -25,6 +28,9 @@ public class RetroalimentationView : BaseView
     {
         foreach (RetroalimentationContent content in modalRetroalimentation.modalContent)
         {
+            _iconMoment.sprite = modalRetroalimentation.iconMoment;
+            _iconMoment.rectTransform.sizeDelta = modalRetroalimentation.iconMomentSize;
+            
             _buttonContinue.gameObject.SetActive(false);
             _normalContent.gameObject.SetActive(content.actualUIType == UIType.Standard);
             _specialContent.gameObject.SetActive(content.actualUIType == UIType.Images);
@@ -35,7 +41,16 @@ public class RetroalimentationView : BaseView
 
             _textSpecialContent.text = content.retroalimentationText;
 
-            await UniTask.WaitForSeconds(content._timeInScreen);
+            if (content.audioClip == null)
+            {
+                await UniTask.WaitForSeconds(content._timeInScreen);
+            }
+            else
+            {
+                await UniTask.WaitForSeconds(content.audioFade);
+                AudioManager.Instance.PlayAudio(content.audioClip);
+                await UniTask.WaitForSeconds(content.audioClip.length);
+            }
             
             _buttonContinue.onClick.RemoveAllListeners();
             _buttonContinue.onClick.AddListener(()=>{content.onAction?.Invoke();});

@@ -15,9 +15,12 @@ MonoBehaviour:
   modalContent:
   - actualUIType: 0
     isGood: 0
-    titleText: "\xA1No lograste superar este  reto!"
+    titleText: "\xA1No lograste\nsuperar este\nreto!"
     retroalimentationText: 'Intenta
 
       nuevamente'
-    _audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: c9c0fede5390b4348a4b21a8b7520869, type: 3}
+    audioFade: 0
     _timeInScreen: 5
+  iconMoment: {fileID: 1088926790, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  iconMomentSize: {x: 114.75, y: 42.15}

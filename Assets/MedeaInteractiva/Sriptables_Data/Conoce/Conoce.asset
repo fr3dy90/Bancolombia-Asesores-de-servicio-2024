@@ -13,19 +13,22 @@ MonoBehaviour:
   m_Name: Conoce
   m_EditorClassIdentifier: 
   modalSprite: {fileID: 635973903, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  modalSpriteSize: {x: 155.4, y: 229.2}
   modalContent:
   - requiredType: 0
     showInfo: 1
     text: "Conocer para qu\xE9 sirve cada uno de los elementos\r\nes fundamental
-      para desarrollar de manera correcta y segura los\r\nprocesos asociados a tu
+      para desarrollar de manera \ncorrecta y segura los procesos asociados a tu
       rol."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: ba8ded54f97f20c4d82fa90b9f43d840, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
     showInfo: 2
-    text: "\xA1Conoce tu puesto de trabajo!\n\nDa clic en cada elemento que veas
-      para familiarizarte con ellos."
+    text: "\xA1Conoce tu puesto de trabajo! \n\nDa clic en los elementos que ves\npara
+      familiarizarte con ellos."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b37be1eefdb3a974e8144eb362306e5d, type: 3}
+    audioFade: 0
     imageIndex: 0

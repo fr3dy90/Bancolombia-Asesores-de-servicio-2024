@@ -13,10 +13,12 @@ MonoBehaviour:
   m_Name: Retate
   m_EditorClassIdentifier: 
   modalSprite: {fileID: 1631037661, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  modalSpriteSize: {x: 203.4, y: 218.2}
   modalContent:
   - requiredType: 0
     showInfo: 2
-    text: "responde a estas preguntas seg\xFAn lo que hemos aprendido."
+    text: "Responde a estas preguntas seg\xFAn lo que hemos aprendido."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 798183b6dedd27e4db078ad8194d3eeb, type: 3}
+    audioFade: 0
     imageIndex: 0

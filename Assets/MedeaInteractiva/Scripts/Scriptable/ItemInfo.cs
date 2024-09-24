@@ -1,4 +1,4 @@
-using Unity.Android.Gradle.Manifest;using UnityEngine;
+using UnityEngine;
 
 [CreateAssetMenu(fileName = "ItemInfo", menuName = "Medea Interactiva/Item Info")]
 public class ItemInfo : ScriptableObject

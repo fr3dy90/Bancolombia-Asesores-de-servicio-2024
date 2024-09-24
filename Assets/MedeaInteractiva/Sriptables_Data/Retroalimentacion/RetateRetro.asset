@@ -15,7 +15,10 @@ MonoBehaviour:
   modalContent:
   - actualUIType: 0
     isGood: 1
-    titleText: "\xA1Felicitaciones!"
+    titleText: "<size=32><b>\xA1Felicitaciones!</b></size>"
     retroalimentationText: Terminaste exitosamente este reto.
-    _audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 62091a377143c4c46b81c9e8f1fcd51e, type: 3}
+    audioFade: 0
     _timeInScreen: 5
+  iconMoment: {fileID: 1088113955, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  iconMomentSize: {x: 131.55, y: 30.3}

@@ -15,16 +15,20 @@ MonoBehaviour:
   modalContent:
   - actualUIType: 0
     isGood: 1
-    titleText: "\xA1Felicitaciones!"
-    retroalimentationText: "Has logrado superar este\r\nreto. Contin\xFAa la experiencia\r\ny
-      aprende m\xE1s sobre tu\r\npuesto de trabajo"
-    _audioClip: {fileID: 0}
+    titleText: "<size=32><b>\xA1Felicitaciones!</b></size>"
+    retroalimentationText: "Has logrado superar este reto.\nContin\xFAa la experiencia
+      y aprende m\xE1s sobre tu puesto de trabajo"
+    audioClip: {fileID: 8300000, guid: a01756de626765e4a9a374b70b6ecf53, type: 3}
+    audioFade: 0
     _timeInScreen: 5
   - actualUIType: 1
     isGood: 1
     titleText: "\xA1Felicitaciones!"
     retroalimentationText: "Clasificaste\r\ncorrectamente los\r\nobjetos, pero tu
-      tiempo\r\npudo ser mejor\r\n\xA1Recuerda que la\r\nagilidad y oportunidad\r\nson
-      fundamentales en tu\r\n\rrol! "
-    _audioClip: {fileID: 0}
+      <size=22><b>tiempo\r\npudo ser mejor</b></size>\r\n\xA1Recuerda que la\r\n<size=22><b>agilidad</b></size>
+      y <size=22><b>oportunidad</b></size>\r\nson fundamentales en tu\r\n\rrol! "
+    audioClip: {fileID: 8300000, guid: ea18f146b4582be4f8296cec0c896fe8, type: 3}
+    audioFade: 0
     _timeInScreen: 5
+  iconMoment: {fileID: 1088926790, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  iconMomentSize: {x: 114.75, y: 42.15}

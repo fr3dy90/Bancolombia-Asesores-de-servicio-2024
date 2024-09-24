@@ -15,15 +15,20 @@ MonoBehaviour:
   modalContent:
   - actualUIType: 0
     isGood: 1
-    titleText: "\xA1Felicitaciones!"
-    retroalimentationText: "Has logrado superar este\r\nreto. Contin\xFAa la experiencia\r\ny
-      aprende m\xE1s sobre tu\r\npuesto de trabajo"
-    _audioClip: {fileID: 0}
+    titleText: "<size=32><b>\xA1Felicitaciones!</b></size>"
+    retroalimentationText: "Has logrado superar este reto.\nContin\xFAa la experiencia
+      y aprende m\xE1s sobre tu puesto de trabajo"
+    audioClip: {fileID: 8300000, guid: a01756de626765e4a9a374b70b6ecf53, type: 3}
+    audioFade: 0
     _timeInScreen: 5
   - actualUIType: 1
     isGood: 1
     titleText: "\xA1Felicitaciones!"
-    retroalimentationText: "\xA1Muy bien!\n\r\nHas finalizado este\r\nreto, demostrando\r\nque
-      conoces\r\nintegralmente tu\r\n\rtrabajo."
-    _audioClip: {fileID: 0}
+    retroalimentationText: "<size=24><b>\xA1Muy bien!</b></size>\n\r\nHas finalizado
+      este\r\nreto, demostrando\r\nque conoces\r\nintegralmente tu\r\n\rtrabajo.\n\nTu
+      puntaje: xxxx"
+    audioClip: {fileID: 8300000, guid: 78ac1607333b0e74696a70104d66fdac, type: 3}
+    audioFade: 0
     _timeInScreen: 5
+  iconMoment: {fileID: 1088926790, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  iconMomentSize: {x: 114.75, y: 42.15}

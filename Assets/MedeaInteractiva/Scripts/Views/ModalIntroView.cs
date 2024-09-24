@@ -20,6 +20,7 @@ public class ModalIntroView : BaseView
     public async void SetBasicIntro(ModalWindowIntro modalWindowIntro)
     {
         _imgIconMoment.sprite = modalWindowIntro.modalSprite;
+        _imgIconMoment.rectTransform.sizeDelta = modalWindowIntro.modalSpriteSize;
         foreach (ModalContent content in modalWindowIntro.modalContent)
         {
             SetUI(content.requiredType);
@@ -31,7 +32,17 @@ public class ModalIntroView : BaseView
             _btnContinue.onClick.RemoveAllListeners();
             SetImage(content.imageIndex -1);
 
-            await UniTask.WaitForSeconds(content.timeInScreen);
+            if (content.audio == null)
+            {
+                await UniTask.WaitForSeconds(content.timeInScreen);
+            }
+            else
+            {
+                await UniTask.WaitForSeconds(content.audioFade);
+                AudioManager.Instance.PlayAudio(content.audio);
+                await UniTask.WaitForSeconds(content.audio.length);
+            }
+            
             _btnContinue.gameObject.SetActive(content.buttonAction != null);
             _btnContinue.onClick.AddListener(() => { content.buttonAction?.Invoke(); });
         }

@@ -13,38 +13,44 @@ MonoBehaviour:
   m_Name: Clasifica
   m_EditorClassIdentifier: 
   modalSprite: {fileID: 2041561270, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  modalSpriteSize: {x: 178.4, y: 233.8}
   modalContent:
   - requiredType: 0
     showInfo: 1
-    text: "Clasificar y darle un orden a las herramientas que har\xE1n parte de tu
-      d\xEDa es fundamental para que puedas ejercer de forma adecuada tu rol y prestar
-      un servicio memorable para nuestros clientes."
+    text: "Clasificar y darle un orden a las herramientas que\nhar\xE1n parte de
+      tu d\xEDa es fundamental para que\npuedas ejercer de forma adecuada tu rol
+      y prestar\nun servicio memorable para nuestros clientes."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 5a2c595c4c4ca0e4eb00c175c175bfa3, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
     showInfo: 1
-    text: "Siempre debes actuar de forma \xE1gil y oportuna; por eso, en este reto
-      el tiempo ser\xE1 un factor determinante para que puedas obtener m\xE1s puntos."
+    text: "Siempre debes actuar de forma \xE1gil y oportuna;\npor eso, en este reto
+      el tiempo ser\xE1 un factor \ndeterminante para que puedas obtener m\xE1s puntos."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: bf12b287d9ce7414285679ddb00b74be, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
     showInfo: 1
-    text: "\xA1La preparaci\xF3n es la base para ofrecer un excelente servicio!"
+    text: "\xA1La preparaci\xF3n es la base\npara ofrecer un excelente servicio!"
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 742b0711e1bd54f488feca36d5328653, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 1
     showInfo: 2
-    text: "Clasifica las diferentes herramientas que se encuentran en tu puesto de
-      trabajo (Dispositivos, Seguridad o Papeler\xEDa)"
+    text: "Clasifica las diferentes herramientas que\nse encuentran en tu puesto
+      de trabajo\n(Dispositivos, Seguridad o Papeler\xEDa)"
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1b2ab53e765953f46a57fd89e3f7c089, type: 3}
+    audioFade: 0
     imageIndex: 1
   - requiredType: 1
     showInfo: 2
     text: Recibe puntos con cada acierto, avanza y demuestra tu conocimiento.
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1061d12ff79d6cf49b341e69d1d04762, type: 3}
+    audioFade: 0
     imageIndex: 2

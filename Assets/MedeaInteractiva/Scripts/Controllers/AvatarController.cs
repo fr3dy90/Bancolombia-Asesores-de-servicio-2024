@@ -17,6 +17,8 @@ public class AvatarController : BaseController
    public override void Init()
    {
       base.Init();
+      _avatarMateo._videoAvatar.url = Application.streamingAssetsPath + "/" +"bc2_Mateo.mp4";
+      _avatarMarcela._videoAvatar.url = Application.streamingAssetsPath + "/" +"bc1_Marcela.mp4";
       _avatarView = GetComponentInChildren<AvatarView>();
       _avatarMateo._matAvatar.SetFloat(MAT_ALPHA, ZERO);
       _avatarMarcela._matAvatar.SetFloat(MAT_ALPHA, ZERO);

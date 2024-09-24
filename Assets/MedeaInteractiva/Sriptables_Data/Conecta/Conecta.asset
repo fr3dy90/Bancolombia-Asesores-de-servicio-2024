@@ -13,28 +13,37 @@ MonoBehaviour:
   m_Name: Conecta
   m_EditorClassIdentifier: 
   modalSprite: {fileID: 2038164760, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  modalSpriteSize: {x: 172, y: 201}
   modalContent:
   - requiredType: 0
-    text: "Conocer para qu\xE9 sirve cada uno de los elementos es fundamental para
-      desarrollar de manera correcta y segura los procesos asociados a tu rol."
+    showInfo: 1
+    text: "Esta vez, tendr\xE1s el reto de asociar cada uno\nde los objetos y herramientas
+      que hacen parte\nde tu puesto de trabajo con su respectiva funci\xF3n."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: dc062abfce9a66f4c87f65882cddab3a, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
-    text: "Esta vez, tendr\xE1s el reto de asociar cada uno de los objetos y herramientas
-      que hacen parte de tu puesto de trabajo, con su respectiva funci\xF3n."
+    showInfo: 1
+    text: "Conocer para qu\xE9 sirve cada uno de los elementos\nes fundamental para
+      desarrollar de manera\ncorrecta y segura los procesos asociados a tu rol."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: b9f40cd85f3b21c4f9caf301c2cbb86e, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
-    text: "Relaciona y empareja los objetos de tu trabajo eligiendo la definici\xF3n
-      que m\xE1s corresponda al elemento."
+    showInfo: 2
+    text: "Relaciona y empareja los objetos de tu trabajo\neligiendo la definici\xF3n
+      que mejor corresponda\nal elemento."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 64a0d170df8b2ed4f9cbf6ff9f0504e3, type: 3}
+    audioFade: 0
     imageIndex: 0
   - requiredType: 0
-    text: "Arrastra cada objeto hasta su definici\xF3n recuerda dejar tu mirada fija
-      en este. Si te equivocas, puedes intentar nuevamente hasta que aciertes."
+    showInfo: 2
+    text: "Arrastra cada objeto hasta su definici\xF3n.\nSi te equivocas, puedes
+      intentar nuevamente\nhasta que aciertes."
     timeInScreen: 5
-    audio: {fileID: 0}
+    audio: {fileID: 8300000, guid: 1c6bd3cf842319c41aab4575b3aae413, type: 3}
+    audioFade: 0
     imageIndex: 0

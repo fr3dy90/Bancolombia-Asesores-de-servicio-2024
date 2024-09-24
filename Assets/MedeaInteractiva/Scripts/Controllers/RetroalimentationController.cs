@@ -15,6 +15,10 @@ public class RetroalimentationController : BaseController
     public static int SelectedRetro = 0;
     public static MainMenu ActualUIState;
 
+    public bool isTest;
+    public int indexTest;
+    public MainMenu uiStateTest;
+
     public override void Init()
     {
         base.Init();
@@ -50,6 +54,13 @@ public class RetroalimentationController : BaseController
     public override void OnStart()
     {
         base.OnStart();
+
+        if (isTest)
+        {
+            SelectedRetro = indexTest;
+            ActualUIState = uiStateTest;
+        }
+        
         switch (ActualUIState)
         {
             case MainMenu.Clasifica:
