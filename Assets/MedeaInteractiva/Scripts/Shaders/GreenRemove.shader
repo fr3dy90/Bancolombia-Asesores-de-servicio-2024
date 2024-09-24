@@ -1,11 +1,10 @@
-Shader "Unlit/GreenRemoveWithFade"
+Shader "Unlit/GreenRemove"
 {
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
         _ColorToRemove ("Color to Remove", Color) = (1,1,1,1)
         _Threshold ("Threshold", Range(0, 1)) = 0.1
-        _GlobalAlpha ("Global Alpha", Range(0, 1)) = 1.0
     }
     SubShader
     {
@@ -37,7 +36,6 @@ Shader "Unlit/GreenRemoveWithFade"
             float4 _MainTex_ST;
             float4 _ColorToRemove;
             float _Threshold;
-            float _GlobalAlpha;
 
             v2f vert (appdata v)
             {
@@ -53,10 +51,8 @@ Shader "Unlit/GreenRemoveWithFade"
 
                 if (distance(col.rgb, _ColorToRemove.rgb) < _Threshold)
                 {
-                    col.a = 0; // Make the pixel fully transparent if it matches the color to remove
+                    discard;
                 }
-
-                col.a *= _GlobalAlpha; // Apply global alpha for fade effect
 
                 return col;
             }
