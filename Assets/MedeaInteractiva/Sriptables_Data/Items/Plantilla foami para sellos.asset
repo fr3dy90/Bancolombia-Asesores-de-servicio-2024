@@ -15,7 +15,7 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: 'Plantilla foami para sellos:'
-  itemDescription: "Permite que la impresi\xF3n de los sellos sobre el papel sea
+  itemDescription: "Permite que la impresi\xF3n de los sellos\nsobre el papel sea
     lo m\xE1s legible posible."
   spriteItem: {fileID: 21300000, guid: 57a427f7b976d5e46bafe7bf6b940918, type: 3}
   itemDescriptionConecta: '

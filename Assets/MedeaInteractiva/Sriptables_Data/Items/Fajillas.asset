@@ -15,5 +15,7 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: 'Fajillas:'
-  itemDescription: "Sirven para amarrar fajos de 100 billetes seg\xFAn su denominaci\xF3n."
+  itemDescription: "Sirven para amarrar fajos de 100 billetes\nseg\xFAn su denominaci\xF3n."
   spriteItem: {fileID: 21300000, guid: 7775b5b173c14264d916f01830026ce3, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

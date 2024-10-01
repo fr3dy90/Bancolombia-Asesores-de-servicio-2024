@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualCategory: 0
   isViewed: 0
+  isSpecial: 0
   itemName: 'Pin pad:'
-  itemDescription: "lee las tarjetas d\xE9bito y cr\xE9dito para realizar transferencias,
+  itemDescription: "Lee las tarjetas d\xE9bito y cr\xE9dito para realizar transferencias,
     retiros y pagos."
   spriteItem: {fileID: 21300000, guid: 3c64c84928e2f0345b83e7d1416515c0, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

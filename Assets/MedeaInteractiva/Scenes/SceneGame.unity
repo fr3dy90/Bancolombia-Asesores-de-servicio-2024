@@ -5435,12 +5435,12 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695470574}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 775674869}
+  m_Father: {fileID: 2076146768}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6390,7 +6390,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2076146768}
-  - {fileID: 695470575}
   m_Father: {fileID: 1633888137}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -8164,6 +8163,15 @@ MonoBehaviour:
   _txtOption_A: {fileID: 723533751}
   _txtOption_B: {fileID: 634825583}
   _txtOption_C: {fileID: 425228642}
+  _dropZoneA:
+    dropZoneUI: {fileID: 0}
+    dropZoneCollider: {fileID: 0}
+  _dropZoneB:
+    dropZoneUI: {fileID: 0}
+    dropZoneCollider: {fileID: 0}
+  _dropZoneC:
+    dropZoneUI: {fileID: 0}
+    dropZoneCollider: {fileID: 0}
 --- !u!1 &923867002
 GameObject:
   m_ObjectHideFlags: 0
@@ -17478,7 +17486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3d4c2fc65a66d478e322e4f455eeed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentState: 1
+  _currentState: 10
   _controllers:
   - {fileID: 1995189072}
   - {fileID: 759161256}
@@ -19422,6 +19430,7 @@ RectTransform:
   - {fileID: 970673355}
   - {fileID: 2110599059}
   - {fileID: 1134608349}
+  - {fileID: 695470575}
   - {fileID: 962817752}
   - {fileID: 1941090377}
   - {fileID: 1995189071}

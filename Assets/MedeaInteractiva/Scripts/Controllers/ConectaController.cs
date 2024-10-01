@@ -22,6 +22,7 @@ public class ConectaController : Interaction
    {
        base.Init();
        _view = GetComponentInChildren<ConectaView>();
+       _view.SetDropZones(_dropZoneOpt_A, _dropZoneOpt_B, _dropZoneOpt_C);
        _currentCategory = Category.Papeleria;
        _view.SetView(true, _currentCategory);
    }
@@ -62,7 +63,7 @@ public class ConectaController : Interaction
            {
                Item itm = _actualList[currentIndex];
                itm.InitItem(ToolBox.SetItemPosition(_spawnPoint[i], _mainCamera, _zOffset), _mainCamera, this);
-               _view.SetAnswerText(i, itm.GetItemInfo());
+               _view.SetAnswerText(i, itm.GetItemInfo(), itm._info.isSpecial);
                itm.SetOption((Option)i);
                itm.transform.localScale = _itemScale;
                itm.gameObject.SetActive(true);
@@ -119,9 +120,10 @@ public class ConectaController : Interaction
        _view.SetColorUI(_dropZoneOpt_A.dropZoneUI, 0);
        _view.SetColorUI(_dropZoneOpt_B.dropZoneUI, 0);
        _view.SetColorUI(_dropZoneOpt_C.dropZoneUI, 0);
-       _dropZoneOpt_A.dropZoneCollider.enabled = true;
-       _dropZoneOpt_B.dropZoneCollider.enabled = true;
-       _dropZoneOpt_C.dropZoneCollider.enabled = true;
+       _dropZoneOpt_A.dropZoneUI.gameObject.SetActive(false);
+       _dropZoneOpt_B.dropZoneUI.gameObject.SetActive(false);
+       _dropZoneOpt_C.dropZoneUI.gameObject.SetActive(false);
+
    }
 
    private void SetCategory(Category currentCategory)

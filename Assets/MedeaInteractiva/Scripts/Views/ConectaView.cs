@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Color = System.Drawing.Color;
 
 public class ConectaView: BaseView
 {
@@ -18,10 +17,20 @@ public class ConectaView: BaseView
     [SerializeField] [CanBeNull] private TextMeshProUGUI _txtOption_A;
     [SerializeField] [CanBeNull] private TextMeshProUGUI _txtOption_B;
     [SerializeField] [CanBeNull] private TextMeshProUGUI _txtOption_C;
-    
-    
 
+    [SerializeField] private StrDropZone _dropZoneA;     
+    [SerializeField] private StrDropZone _dropZoneB;     
+    [SerializeField] private StrDropZone _dropZoneC;
+    
     private const string nivel = "Nivel";
+    
+    public void SetDropZones(StrDropZone a, StrDropZone b, StrDropZone c)
+    {
+        _dropZoneA = a;
+        _dropZoneB = b;
+        _dropZoneC = c;
+    }
+    
     public void SetView(bool intro, Category actualCategory)
     {
       
@@ -49,19 +58,44 @@ public class ConectaView: BaseView
 
     }
 
-    public void SetAnswerText(int index, string answer)
+    public void SetAnswerText(int index, string answer,  bool isSpecial)
     {
         switch (index)
         {
             case 0:
                 _txtOption_A.text = answer;
+                SetImg(_dropZoneA.dropZoneUI.GetComponent<Image>(), isSpecial);
+                _dropZoneA.dropZoneUI.gameObject.SetActive(true);
+                _dropZoneA.dropZoneCollider.enabled = true;
+                
                 break;
             case 1:
                 _txtOption_B.text = answer;
+                SetImg(_dropZoneB.dropZoneUI.GetComponent<Image>(), isSpecial); 
+                _dropZoneB.dropZoneUI.gameObject.SetActive(true);
+                _dropZoneB.dropZoneCollider.enabled = true;
                 break;
             case 2:
                 _txtOption_C.text = answer;
+                SetImg(_dropZoneC.dropZoneUI.GetComponent<Image>(), isSpecial); 
+                _dropZoneC.dropZoneUI.gameObject.SetActive(true);
+                _dropZoneC.dropZoneCollider.enabled = true;
                 break;
+        }
+    }
+
+    private void SetImg(Image content, bool isSpecial)
+    {
+        if (isSpecial)
+        {
+            content.type = Image.Type.Sliced;
+            content.rectTransform.sizeDelta = new Vector2(content.rectTransform.sizeDelta.x, 150);
+            content.pixelsPerUnitMultiplier = 12;
+        }
+        else
+        {
+            content.type = Image.Type.Simple;
+            content.rectTransform.sizeDelta = new Vector2(content.rectTransform.sizeDelta.x, 88.65f);
         }
     }
 

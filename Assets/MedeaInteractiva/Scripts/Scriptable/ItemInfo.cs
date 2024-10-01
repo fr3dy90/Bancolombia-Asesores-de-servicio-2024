@@ -5,6 +5,7 @@ public class ItemInfo : ScriptableObject
 {
     public Category actualCategory;
     public bool isViewed = false;
+    public bool isSpecial = false;
     public string itemName;
     [TextArea(3,3)]
     public string itemDescription;

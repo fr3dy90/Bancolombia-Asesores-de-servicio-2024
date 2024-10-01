@@ -15,6 +15,10 @@ MonoBehaviour:
   actualCategory: 0
   isViewed: 0
   itemName: "M\xE1quina contadora de billetes"
-  itemDescription: Clasifica, cuenta y valida la autenticidad de los billetes cuando
-    se tienen altos flujos de efectivo.
+  itemDescription: 'Clasifica, cuenta y valida la autenticidad de los billetes
+
+    cuando
+    se tienen altos flujos de efectivo.'
   spriteItem: {fileID: 21300000, guid: 56465fe775ca58748bc119ba70db0e03, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

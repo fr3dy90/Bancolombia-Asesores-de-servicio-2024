@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualCategory: 1
   isViewed: 0
+  isSpecial: 1
   itemName: 'Sellos:'
   itemDescription: "usados\_para\_estampar\_un mensaje en los documentos asociados
     con las diferentes transacciones, con el fin de certificarlos. Algunos son \no
     Sello Recibido sin pago.\r\no Sello Recibido con pago.\r\no Sello Recibido pagado.\r\no
     Sello de Canje."
   spriteItem: {fileID: 21300000, guid: 1eeb96603cd8808439303b6637c333f5, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

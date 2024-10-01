@@ -15,6 +15,8 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: 'Copitos:'
-  itemDescription: "Sirve para aplicar el removedor o el hipoclorito sobre los cheques
+  itemDescription: "Sirve para aplicar el removedor o el hipoclorito\nsobre los cheques
     o los t\xEDtulos valor."
   spriteItem: {fileID: 21300000, guid: 59c05cb170b70c049a7b0fca2e1aade8, type: 3}
+  itemDescriptionConecta: 
+  CurrentOption: 0

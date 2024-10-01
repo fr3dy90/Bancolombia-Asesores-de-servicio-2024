@@ -15,6 +15,8 @@ MonoBehaviour:
   actualCategory: 2
   isViewed: 0
   itemName: 'Billetero:'
-  itemDescription: "Compartimiento que guarda bajo llave los billetes clasificados
+  itemDescription: "Compartimiento que guarda bajo llave\nlos billetes clasificados
     por denominaci\xF3n."
   spriteItem: {fileID: 0}
+  itemDescriptionConecta: 
+  CurrentOption: 0
