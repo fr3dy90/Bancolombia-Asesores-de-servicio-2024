@@ -67,7 +67,6 @@ public class ConectaView: BaseView
                 SetImg(_dropZoneA.dropZoneUI.GetComponent<Image>(), isSpecial);
                 _dropZoneA.dropZoneUI.gameObject.SetActive(true);
                 _dropZoneA.dropZoneCollider.enabled = true;
-                
                 break;
             case 1:
                 _txtOption_B.text = answer;

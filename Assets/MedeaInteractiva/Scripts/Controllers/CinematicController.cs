@@ -3,7 +3,11 @@ using UnityEngine;
 
 public class CinematicController : BaseController
 {
+   public static bool IsExit = false;
+   
    [SerializeField] private CinemachineVirtualCamera[] _cameras;
+    
+   
    public override void Init()
    {
       foreach (CinemachineVirtualCamera cam in _cameras)
@@ -11,12 +15,20 @@ public class CinematicController : BaseController
          cam.GetComponent<CameraReporter>().SetConreoller(this);
       }
 
+      IsExit = false;
       SetCameraPriority(0);
    }
 
    public override void OnStart()
    {
+      if (!IsExit)
+      {
       PlayCameraAnimation(0);
+      }
+      else
+      {
+         PlayCameraAnimationExit();
+      }
    }
 
    public void SetCameraPriority(int cameraIndex)
@@ -36,5 +48,11 @@ public class CinematicController : BaseController
    public void ChangeState()
    {
       BaseSceneController.Instance.ChangeState(UIState.Welcome);
+   }
+
+   private void PlayCameraAnimationExit()
+   {
+      SetCameraPriority(2);
+      _cameras[2].GetComponent<Animator>().SetTrigger("Exit");
    }
 }

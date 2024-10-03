@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
-using UnityEngine.UI;
 
 public static class 
     ToolBox
@@ -154,6 +153,4 @@ public static class
         Ray ray = cam.ScreenPointToRay(spawnPoint.position);
         return ray.direction * zOffset + cam.transform.position;
     }
-    
-    
 }

@@ -21,6 +21,8 @@ public class ClasificaController : Interaction
 
     private const int MAX_STARTS = 12;
     private const float MAX_TIME = 120;
+
+    private int _score;
     
     
         
@@ -41,6 +43,7 @@ public class ClasificaController : Interaction
         _dispositivosCounter = 0;
         _seguridadCounter = 0;
         _papeleriaCounter = 0;
+        _score = 0;
         
         _currentIndex = 0;
         ObjectManager.Instance.MixObjects();
@@ -101,6 +104,9 @@ public class ClasificaController : Interaction
                     _papeleriaCounter++;
                     break;
             }
+            UIAnimationManager.Instance.StartUIAnimation();
+            _score++;
+            _view.SetScore(_score);
         }
         SetFillers();
         ActiveCurrentObject();

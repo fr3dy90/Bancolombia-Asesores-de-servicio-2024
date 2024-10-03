@@ -1,4 +1,3 @@
-
 using System;
 using UnityEngine;
 using UnityEngine.Video;
@@ -73,7 +72,11 @@ public class AvatarController : BaseController
          ToolBox.PlayAvatar(_avatarMateo,  MAT_ALPHA, 23f, 37f, _avatarMateo._matAvatar,() =>
          {
             ToolBox.SimpleFade(1, .5f, _baseView.GetCanvasGroup(),
-               () => BaseSceneController.Instance.ChangeState(UIState.Menu));
+               () =>
+               {
+                  CinematicController.IsExit = true;
+                  BaseSceneController.Instance.ChangeState(UIState.Cinematic);
+               });
          });
       });
    }

@@ -8,6 +8,7 @@ public class ClasificaView: BaseView
     [SerializeField] private TextMeshProUGUI _hours;
     [SerializeField] private TextMeshProUGUI _minutes;
     [SerializeField] private TextMeshProUGUI _seconds;
+    [SerializeField] private TextMeshProUGUI _score;
     [SerializeField] private Image _dispositivosFill;
     [SerializeField] private Image _seguridadFill;
     [SerializeField] private Image _papeleriaFill;
@@ -29,5 +30,10 @@ public class ClasificaView: BaseView
         _dispositivosFill.fillAmount = dispositivosFill;
         _seguridadFill.fillAmount = seguridadFill;
         _papeleriaFill.fillAmount = papeleriaFill;
+    }
+
+    public void SetScore(int score)
+    {
+        _score.text = $"x: {score}";
     }
 }
