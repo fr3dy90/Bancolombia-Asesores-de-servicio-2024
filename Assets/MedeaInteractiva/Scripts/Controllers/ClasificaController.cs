@@ -22,9 +22,10 @@ public class ClasificaController : Interaction
     private const int MAX_STARTS = 12;
     private const float MAX_TIME = 120;
 
+    [Header("Retroalimentation")]
     private int _score;
-    
-    
+    [SerializeField] private ModalRetroalimentation _retroalimentation;
+    [SerializeField, TextArea(3,3)] private string retroalimentation_string;
         
     public override void Init()
     {
@@ -124,6 +125,7 @@ public class ClasificaController : Interaction
 
         if (totalEvaluate >= MAX_STARTS && _currentTime <= MAX_TIME)
         {
+            _retroalimentation.modalContent[1].retroalimentationText = $"{retroalimentation_string}{_score}";
             RetroalimentationController.SelectedRetro = 2;
         }
         else if(totalEvaluate >= MAX_STARTS && _currentTime > MAX_TIME)

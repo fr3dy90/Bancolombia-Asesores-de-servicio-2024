@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d25bdbea457db4fb4bb69a7ed79c0d, type: 3}
+  m_Name: RetateRtro_Bad
+  m_EditorClassIdentifier: 
+  modalContent:
+  - actualUIType: 0
+    isGood: 0
+    titleText: "\xA1No lograste\nsuperar este\nreto!"
+    retroalimentationText: 'Intenta
+
+      nuevamente'
+    audioClip: {fileID: 8300000, guid: c9c0fede5390b4348a4b21a8b7520869, type: 3}
+    audioFade: 0
+    _timeInScreen: 5
+  iconMoment: {fileID: 1088926790, guid: 931b65bacb8ecd5468ddc55bf6e3ed85, type: 3}
+  iconMomentSize: {x: 114.75, y: 42.15}

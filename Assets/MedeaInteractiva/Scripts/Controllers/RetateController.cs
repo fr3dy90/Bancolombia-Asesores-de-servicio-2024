@@ -10,6 +10,7 @@ public class RetateController : BaseController
     [SerializeField] private ModalQuestions _runtimeQuestions;
     
     [SerializeField] private int _currentIndex;
+    [SerializeField] private int _goodAnswers = 0;
     
 
     public override void Init()
@@ -33,7 +34,9 @@ public class RetateController : BaseController
     public override void OnStart()
     {
         base.OnStart();
+        _goodAnswers = 0;
         _currentIndex = 0;
+        ClearAnswers();
         OnSetQuestions();
         SetQuestion(_currentIndex);
     }
@@ -60,6 +63,7 @@ public class RetateController : BaseController
         }
         else
         {
+            RetroalimentationController.SelectedRetro = _goodAnswers >= 3 ? 1 : 0;
             RetroalimentationController.ActualUIState = MainMenu.Preparate;
             BaseSceneController.Instance.ChangeState(UIState.Retroalimentation);
         }
@@ -74,8 +78,24 @@ public class RetateController : BaseController
             {
                 _runtimeQuestions.questions[_currentIndex].answered = true;
                 _runtimeQuestions.questions[_currentIndex].answers[i1].userChoise = true;
+                if (_runtimeQuestions.questions[_currentIndex].answers[i1].isCorrectAnswer)
+                {
+                    _goodAnswers++;
+                }
                 SetQuestion(_currentIndex);
             });
+        }
+    }
+
+    private void ClearAnswers()
+    {
+        foreach (Question actualQuestion in _runtimeQuestions.questions)
+        {
+            actualQuestion.answered = false;
+            foreach (Answer actualAnswer in actualQuestion.answers)
+            {
+                actualAnswer.userChoise = false;
+            }
         }
     }
 }

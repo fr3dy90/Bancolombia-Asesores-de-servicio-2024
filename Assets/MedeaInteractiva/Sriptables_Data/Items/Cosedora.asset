@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   actualCategory: 2
   isViewed: 0
-  itemName: Validadora
+  isSpecial: 0
+  itemName: Cosedora
   itemDescription: 'Usando este elemento podemos unir
 
     cualquier tipo de documentos.'

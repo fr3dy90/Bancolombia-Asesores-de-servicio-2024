@@ -5,14 +5,14 @@ public class CinematicController : BaseController
 {
    public static bool IsExit = false;
    
-   [SerializeField] private CinemachineVirtualCamera[] _cameras;
+   [SerializeField] private Transform[] _camerasTr;
     
    
    public override void Init()
    {
-      foreach (CinemachineVirtualCamera cam in _cameras)
+      foreach (Transform cam in _camerasTr)
       {
-         cam.GetComponent<CameraReporter>().SetConreoller(this);
+         cam.GetComponent<CameraReporter>().SetController(this);
       }
 
       IsExit = false;
@@ -23,7 +23,7 @@ public class CinematicController : BaseController
    {
       if (!IsExit)
       {
-      PlayCameraAnimation(0);
+         PlayCameraAnimation(0);
       }
       else
       {
@@ -33,16 +33,18 @@ public class CinematicController : BaseController
 
    public void SetCameraPriority(int cameraIndex)
    {
-      for (int i = 0; i < _cameras.Length; i++)
+      for (int i = 0; i < _camerasTr.Length; i++)
       {
-         _cameras[i].Priority = i == cameraIndex ? 1 : 0;
+         _camerasTr[i].GetComponentInChildren<CinemachineVirtualCamera>().Priority = i == cameraIndex ? 1 : 0;
       }
    }
 
    public void PlayCameraAnimation(int cameraIndex)
    {
       SetCameraPriority(cameraIndex);
-      _cameras[cameraIndex].GetComponent<Animator>().SetTrigger("Play");
+      
+      _camerasTr[cameraIndex].GetComponent<Animator>().SetTrigger("Play");
+      _camerasTr[cameraIndex].GetComponent<CameraReporter>().StartTargetMovement();
    }
 
    public void ChangeState()
@@ -53,6 +55,6 @@ public class CinematicController : BaseController
    private void PlayCameraAnimationExit()
    {
       SetCameraPriority(2);
-      _cameras[2].GetComponent<Animator>().SetTrigger("Exit");
+      _camerasTr[2].GetComponent<Animator>().SetTrigger("Exit");
    }
 }

@@ -4,6 +4,7 @@ public class DragAndDropManager : MonoBehaviour
 {
     [SerializeField] private Camera _cam;
     [SerializeField] private Item _currentItem;
+    [SerializeField] private LayerMask _layerInteraction;
     public bool isDraggin {get; private set; }
 
     public void DragItem(Item item)
@@ -31,6 +32,17 @@ public class DragAndDropManager : MonoBehaviour
         
         if (isDraggin && _currentItem != null)
         {
+            Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, 50f,_layerInteraction))
+            {
+                if (hit.transform != null)
+                {
+                    Debug.Log($"<color=green>{hit.transform.name}</color>");
+                    _currentItem.transform.position = hit.transform.GetComponent<DropZone>()._itemTarget;
+                    return;
+                }                
+            }
+            
             _currentItem.transform.position = MouseWorldPosition(_currentItem.transform);
         }
     }

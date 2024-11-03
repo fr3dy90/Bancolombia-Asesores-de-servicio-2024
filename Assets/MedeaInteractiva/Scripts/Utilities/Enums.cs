@@ -16,7 +16,8 @@ public enum UIState
     Conoce,
     Clasifica,
     Conecta,
-    Retate
+    Retate,
+    Info
 }
 
 public enum MainMenu
@@ -61,9 +62,16 @@ public enum AvatarMoment
     Exit
 }
 
+public enum SetInfoText
+{
+    Start,
+    End
+}
+
 [Serializable]
 public struct StrDropZone
 {
+    public RectTransform targetItem;
     public RectTransform dropZoneUI;
     public Collider dropZoneCollider;
 }

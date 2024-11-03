@@ -153,4 +153,18 @@ public static class
         Ray ray = cam.ScreenPointToRay(spawnPoint.position);
         return ray.direction * zOffset + cam.transform.position;
     }
+
+    public static async UniTask DesirePos(Transform tr, Vector3 start, Vector3 finish, float duration)
+    {
+        tr.position = start;
+        float elapsetTime = 0;
+        while (elapsetTime < duration)
+        {
+            elapsetTime += Time.deltaTime;
+            float progress = elapsetTime / duration;
+            float easeOutProgress = 1 - Mathf.Pow(1 - progress, 2);
+            tr.position = Vector3.Lerp(start, finish, easeOutProgress);
+            await UniTask.Yield();
+        }
+    }
 }

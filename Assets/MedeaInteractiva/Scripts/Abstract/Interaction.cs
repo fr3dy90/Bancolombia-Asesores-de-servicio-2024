@@ -28,6 +28,13 @@ public abstract class Interaction: BaseController
         ToolBox.SetSceneTransforms(_dropZoneOpt_A, _mainCamera, _zOffset, factor);
         ToolBox.SetSceneTransforms(_dropZoneOpt_B, _mainCamera, _zOffset, factor);
         ToolBox.SetSceneTransforms(_dropZoneOpt_C, _mainCamera, _zOffset, factor);
+        
+        _dropZoneOpt_A.dropZoneCollider.GetComponent<DropZone>()._itemTarget =
+            ToolBox.SetItemPosition(_dropZoneOpt_A.targetItem, _mainCamera, _zOffset);
+        _dropZoneOpt_B.dropZoneCollider.GetComponent<DropZone>()._itemTarget =
+            ToolBox.SetItemPosition(_dropZoneOpt_B.targetItem, _mainCamera, _zOffset);
+        _dropZoneOpt_C.dropZoneCollider.GetComponent<DropZone>()._itemTarget =
+            ToolBox.SetItemPosition(_dropZoneOpt_C.targetItem, _mainCamera, _zOffset);
     }
 
     protected void EnableColliders()

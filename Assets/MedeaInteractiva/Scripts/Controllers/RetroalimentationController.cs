@@ -10,7 +10,7 @@ public class RetroalimentationController : BaseController
     [SerializeField] private ModalRetroalimentation[] _modalConecta;
 
     [Header("Retate")]
-    [SerializeField] private ModalRetroalimentation _modalRetate;
+    [SerializeField] private ModalRetroalimentation[] _modalRetate;
     
     public static int SelectedRetro = 0;
     public static MainMenu ActualUIState;
@@ -43,7 +43,8 @@ public class RetroalimentationController : BaseController
             BaseSceneController.Instance.ChangeState(UIState.Menu);
         };
 
-        _modalRetate.modalContent[0].onAction = () =>
+        _modalRetate[0].modalContent[0].onAction = () => BaseSceneController.Instance.ChangeState(UIState.Retate);
+        _modalRetate[1].modalContent[0].onAction = () =>
         {
             AvatarController.CurrentMoment = AvatarMoment.Exit;
             BaseSceneController.Instance.ChangeState(UIState.Avatar);
@@ -70,7 +71,7 @@ public class RetroalimentationController : BaseController
                 _view.SetView(_modalConecta[SelectedRetro]);
                 break;
             case MainMenu.Preparate:
-                _view.SetView(_modalRetate);
+                _view.SetView(_modalRetate[SelectedRetro]);
                 break;
         }
     }

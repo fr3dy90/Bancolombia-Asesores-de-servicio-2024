@@ -43,7 +43,9 @@ public class ConectaView: BaseView
                 Category.Seguridad => _seguridad,
                 Category.Papeleria => _papeleria
             };
-
+            _imgIntro.SetNativeSize();
+            _imgIntro.rectTransform.sizeDelta = new Vector2(_imgIntro.rectTransform.sizeDelta.x * .18f,
+                _imgIntro.rectTransform.sizeDelta.y * .18f);
             string cat = actualCategory switch
             {
                 Category.Papeleria => "1",
