@@ -132,7 +132,7 @@ public static class
         avatar._videoAvatar.Pause();
     }
 
-    public static void SetSceneTransforms(StrDropZone dropZone, Camera cam, float _zOffset, float factor)
+    public static void SetSceneTransforms(StrDropZone dropZone, Camera cam, float _zOffset, float factor, bool custom)
     {
         Ray ray = cam.ScreenPointToRay(dropZone.dropZoneUI.position);
         
@@ -143,8 +143,11 @@ public static class
         float distance = Vector3.Distance(cam.transform.position, dropZone.dropZoneCollider.transform.position);
         Vector2 uiSize = dropZone.dropZoneUI.rect.size;
         
+        Vector3 colliderScale = Vector3.zero;
         // Relacionar la escala del collider con el tamaño de la UI y la distancia
-        Vector3 colliderScale = new Vector3(uiSize.x * distance / factor, uiSize.y * distance / factor, uiSize.x * distance / factor);
+        colliderScale = !custom ? new Vector3(uiSize.x * distance / factor, uiSize.y * distance / factor, uiSize.x * distance / factor) : new Vector3(uiSize.x * (distance / factor)* 1.7f, uiSize.y * distance / factor, uiSize.x * distance / factor);
+            
+        dropZone.dropZoneCollider.transform.LookAt(cam.transform);
         dropZone.dropZoneCollider.transform.localScale = colliderScale;
     }
 

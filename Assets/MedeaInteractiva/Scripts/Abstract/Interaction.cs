@@ -11,6 +11,7 @@ public abstract class Interaction: BaseController
     [Range(.5f, 5f)] public float _zOffset = 5f;
     [Range(100f, 2000)] public float factor;
     public bool test;
+    public bool isCustom;
 
     public override void Init()
     {
@@ -25,9 +26,9 @@ public abstract class Interaction: BaseController
     
     protected virtual void SetColliders()
     {
-        ToolBox.SetSceneTransforms(_dropZoneOpt_A, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZoneOpt_B, _mainCamera, _zOffset, factor);
-        ToolBox.SetSceneTransforms(_dropZoneOpt_C, _mainCamera, _zOffset, factor);
+        ToolBox.SetSceneTransforms(_dropZoneOpt_A, _mainCamera, _zOffset, factor, isCustom);
+        ToolBox.SetSceneTransforms(_dropZoneOpt_B, _mainCamera, _zOffset, factor, isCustom);
+        ToolBox.SetSceneTransforms(_dropZoneOpt_C, _mainCamera, _zOffset, factor, isCustom);
         
         _dropZoneOpt_A.dropZoneCollider.GetComponent<DropZone>()._itemTarget =
             ToolBox.SetItemPosition(_dropZoneOpt_A.targetItem, _mainCamera, _zOffset);
