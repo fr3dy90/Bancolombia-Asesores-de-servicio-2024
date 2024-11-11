@@ -32,16 +32,16 @@ public class DragAndDropManager : MonoBehaviour
         
         if (isDraggin && _currentItem != null)
         {
+            /*
             Ray ray = _cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit hit, 50f,_layerInteraction))
             {
                 if (hit.transform != null)
                 {
-                    Debug.Log($"<color=green>{hit.transform.name}</color>");
-                    _currentItem.transform.position = hit.transform.GetComponent<DropZone>()._itemTarget;
+                    //_currentItem.transform.position = hit.transform.GetComponent<DropZone>()._itemTarget;
                     return;
                 }                
-            }
+            }*/
             
             _currentItem.transform.position = MouseWorldPosition(_currentItem.transform);
         }
@@ -49,7 +49,6 @@ public class DragAndDropManager : MonoBehaviour
 
     Vector3 MouseWorldPosition(Transform target)
     {
-        return _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y,
-            _cam.WorldToScreenPoint(target.transform.position).z));
+         return _cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, _cam.WorldToScreenPoint(target.transform.position).z));
     }
 }

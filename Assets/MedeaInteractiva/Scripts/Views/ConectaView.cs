@@ -33,31 +33,29 @@ public class ConectaView: BaseView
     
     public void SetView(bool intro, Category actualCategory)
     {
-      
-            _introImgae.SetActive(intro);
-            _interacioGameObject.SetActive(!intro);
+        _introImgae.SetActive(intro);
+        _interacioGameObject.SetActive(!intro);
 
-            _imgIntro.sprite = actualCategory switch
-            {
-                Category.Dispositivos => _dispositivos,
-                Category.Seguridad => _seguridad,
-                Category.Papeleria => _papeleria
-            };
-            _imgIntro.SetNativeSize();
-            _imgIntro.rectTransform.sizeDelta = new Vector2(_imgIntro.rectTransform.sizeDelta.x * .18f,
-                _imgIntro.rectTransform.sizeDelta.y * .18f);
-            string cat = actualCategory switch
-            {
-                Category.Papeleria => "1",
-                Category.Dispositivos => "2",
-                Category.Seguridad => "3"
-            };
-            _textIntro.text = $"{nivel} {cat}";
+        _imgIntro.sprite = actualCategory switch
+        {
+            Category.Dispositivos => _dispositivos,
+            Category.Seguridad => _seguridad,
+            Category.Papeleria => _papeleria
+        };
+        _imgIntro.SetNativeSize();
+        _imgIntro.rectTransform.sizeDelta = new Vector2(_imgIntro.rectTransform.sizeDelta.x * .18f,
+            _imgIntro.rectTransform.sizeDelta.y * .18f);
+        string cat = actualCategory switch
+        {
+            Category.Papeleria => "1",
+            Category.Dispositivos => "2",
+            Category.Seguridad => "3"
+        };
+        _textIntro.text = $"{nivel} {cat}";
 
-            _txtOption_A.text = "";
-            _txtOption_B.text = "";
-            _txtOption_C.text = "";
-
+        _txtOption_A.text = "";
+        _txtOption_B.text = "";
+        _txtOption_C.text = "";
     }
 
     public void SetAnswerText(int index, string answer,  bool isSpecial)

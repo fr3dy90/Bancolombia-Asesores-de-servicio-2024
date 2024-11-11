@@ -132,12 +132,12 @@ public static class
         avatar._videoAvatar.Pause();
     }
 
-    public static void SetSceneTransforms(StrDropZone dropZone, Camera cam, float _zOffset, float factor)
+    public static void SetSceneTransforms(StrDropZone dropZone, Camera cam, float _zOffset, float factor, bool isClasifica)
     {
+        /*
         Ray ray = cam.ScreenPointToRay(dropZone.dropZoneUI.position);
         
         dropZone.dropZoneCollider.transform.position = ray.direction * _zOffset + cam.transform.position;
-        
 
         // Escalar el collider en función de la distancia y el tamaño de la UI
         float distance = Vector3.Distance(cam.transform.position, dropZone.dropZoneCollider.transform.position);
@@ -146,12 +146,26 @@ public static class
         // Relacionar la escala del collider con el tamaño de la UI y la distancia
         Vector3 colliderScale = new Vector3(uiSize.x * distance / factor, uiSize.y * distance / factor, uiSize.x * distance / factor);
         dropZone.dropZoneCollider.transform.localScale = colliderScale;
+        */
+
+        dropZone.dropZoneCollider.transform.position = dropZone.dropZoneUI.transform.position;
+
+        Vector2 sizeDelta = dropZone.dropZoneUI.sizeDelta;
+        Vector3 worldScale = dropZone.dropZoneUI.lossyScale;
+
+        
+            
+        dropZone.dropZoneCollider.transform.GetComponent<BoxCollider>().size = new Vector3((worldScale.x * sizeDelta.x) * (isClasifica?.22f:.5f), worldScale.y * (isClasifica?1:.22f) * sizeDelta.y, 0.13f);
+        dropZone.dropZoneCollider.transform.rotation = dropZone.dropZoneUI.transform.rotation;
     }
 
     public static Vector3 SetItemPosition(RectTransform spawnPoint, Camera cam, float zOffset)
     {
+        return spawnPoint.transform.position;
+        /*
         Ray ray = cam.ScreenPointToRay(spawnPoint.position);
         return ray.direction * zOffset + cam.transform.position;
+        */
     }
 
     public static async UniTask DesirePos(Transform tr, Vector3 start, Vector3 finish, float duration)
