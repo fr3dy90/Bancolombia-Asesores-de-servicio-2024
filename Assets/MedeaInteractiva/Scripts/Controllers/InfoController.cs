@@ -9,6 +9,8 @@ public class InfoController : BaseController
    [SerializeField] private SetInfoText _actualInfoText;
    [SerializeField] private Button _button;
 
+   [SerializeField] private Camera _ui_cam;
+
    public override void Init()
    {
       base.Init();
@@ -18,6 +20,7 @@ public class InfoController : BaseController
 
    public override void OnStart()
    {
+      _ui_cam.gameObject.SetActive(true);
       base.OnStart();
       SetText();
    }

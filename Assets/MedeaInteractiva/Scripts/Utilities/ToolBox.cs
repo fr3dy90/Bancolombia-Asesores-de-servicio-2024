@@ -104,6 +104,8 @@ public static class
     
     public static async void PlayAvatar(Avatar avatar, string MAT_ALPHA, float startTime, float stopTime, Material _matAvatar,Action onComplete = null)
     {
+        avatar._rawImgAvatar.gameObject.SetActive(true);
+        
         if (startTime >= 0 && startTime < avatar._videoAvatar.length)
         {
             avatar._videoAvatar.time = startTime;

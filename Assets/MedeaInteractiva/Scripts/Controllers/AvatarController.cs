@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Video;
 
 public class AvatarController : BaseController
@@ -47,12 +48,11 @@ public class AvatarController : BaseController
       }
    }
 
-  
-
    private void AvatarRetate()
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
+         _avatarMateo._rawImgAvatar.gameObject.SetActive(false);
          ToolBox.PlayAvatar(_avatarMarcela,  MAT_ALPHA, 40f, 59f, _avatarMarcela._matAvatar, () => BaseSceneController.Instance.ChangeState(UIState.ModalIntro));
       });
    }
@@ -61,6 +61,7 @@ public class AvatarController : BaseController
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
+         _avatarMateo._rawImgAvatar.gameObject.SetActive(false);
          ToolBox.PlayAvatar(_avatarMarcela,  MAT_ALPHA, 0f, 16f, _avatarMarcela._matAvatar, MateoEntrance);
       });
    }
@@ -69,6 +70,7 @@ public class AvatarController : BaseController
    {
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
+         _avatarMarcela._rawImgAvatar.gameObject.SetActive(false);
          ToolBox.PlayAvatar(_avatarMateo,  MAT_ALPHA, 23f, 37f, _avatarMateo._matAvatar,() =>
          {
             ToolBox.SimpleFade(1, .5f, _baseView.GetCanvasGroup(),
@@ -83,6 +85,7 @@ public class AvatarController : BaseController
 
    private void MateoEntrance()
    {
+      _avatarMarcela._rawImgAvatar.gameObject.SetActive(false);
       ToolBox.PlayAvatar(_avatarMateo, MAT_ALPHA, 15f, 23, _avatarMateo._matAvatar, ()=> BaseSceneController.Instance.ChangeState(UIState.Cinematic));
    }
    
@@ -94,6 +97,7 @@ public struct Avatar
 {
    public Material _matAvatar;
    public VideoPlayer _videoAvatar;
+   public RawImage _rawImgAvatar;
 }
 
 
