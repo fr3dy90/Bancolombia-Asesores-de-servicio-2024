@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Atlas_01
+    second: {fileID: 2100000, guid: ba0b225d5dd46e84783b360296573d1b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: DFS_Man_01_Cloth
     second: {fileID: 2100000, guid: 18f55d2eb338572448e012be90fe35bd, type: 2}
   - first:
