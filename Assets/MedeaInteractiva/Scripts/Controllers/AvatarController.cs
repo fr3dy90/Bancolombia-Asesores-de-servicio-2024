@@ -53,11 +53,9 @@ public class AvatarController : BaseController
 
    private void AvatarRetate()
    {
-      ScormManager.Instance.SetCompleted();
-
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
-         _avatarMateo._rawImgAvatar.gameObject.SetActive(false);
+          _avatarMateo._rawImgAvatar.gameObject.SetActive(false);
          ToolBox.PlayAvatar(_avatarMarcela,  MAT_ALPHA, 40f, 59f, _avatarMarcela._matAvatar, () => BaseSceneController.Instance.ChangeState(UIState.ModalIntro));
       });
    }
@@ -73,6 +71,8 @@ public class AvatarController : BaseController
 
    private void AvatarExit()
    {
+      ScormManager.Instance.SetCompleted();
+      
       ToolBox.SimpleFade(0, .5f, _baseView.GetCanvasGroup(), () =>
       {
          _avatarMarcela._rawImgAvatar.gameObject.SetActive(false);

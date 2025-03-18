@@ -44,19 +44,29 @@ public class ScormManager : MonoBehaviour
 
         if (result)
         {
-            Debug.Log("Communication initialized (Scorm " + (version == Version.Scorm_1_2 ? "1.2" : "2004") + ").");
+            //Debug.Log("SCORM Initialized.");
+
+            string lastLocation = _scormService.GetLessonLocation();
+            if (!string.IsNullOrEmpty(lastLocation))
+            {
+                //Debug.Log("Resuming from: " + lastLocation);
+            }
         }
-        else
-        {
-            Debug.Log("There was an error during initialization (Scorm " + (version == Version.Scorm_1_2 ? "1.2" : "2004") + ").");
-        }
+    }
+
+    public void SetLessonLocation(string location)
+    {
+        _scormService.SetLessonLocation(location);
+        _scormService.Commit();
     }
 
     public void SetCompleted()
     {
+        if (CheckIsCompleted()) return;
+        
         _scormService.SetRawScore(100.0f);
+         _scormService.SetLessonStatus(LessonStatus.Passed);
         _scormService.SetLessonStatus(LessonStatus.Completed);
-        _scormService.SetLessonStatus(LessonStatus.Passed);
         _scormService.Commit();
     }
 
@@ -67,6 +77,17 @@ public class ScormManager : MonoBehaviour
 
     public void SetFinish()
     {
+        _scormService.Commit();
         _scormService.Finish();
+    }
+
+    void OnApplicationQuit()
+    {
+        SetFinish();
+    }
+
+    void OnDestroy()
+    {
+        SetFinish();
     }
 }
