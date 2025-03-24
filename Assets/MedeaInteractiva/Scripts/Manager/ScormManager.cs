@@ -72,7 +72,12 @@ public class ScormManager : MonoBehaviour
 
     public bool CheckIsCompleted()
     {
-        return _scormService.GetLessonStatus() == LessonStatus.Completed;
+        if (_scormService.GetLessonStatus() == LessonStatus.Completed || _scormService.GetLessonStatus() == LessonStatus.Passed)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void SetFinish()
