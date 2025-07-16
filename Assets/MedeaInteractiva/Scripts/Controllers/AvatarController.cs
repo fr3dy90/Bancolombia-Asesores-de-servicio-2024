@@ -28,8 +28,6 @@ public class AvatarController : BaseController
       _avatarMarcela._videoAvatar.playOnAwake = false;
       _avatarMateo._videoAvatar.Pause();
       _avatarMarcela._videoAvatar.Pause();
-
-      ScormManager.Instance.Init();
    }
 
    public override void OnStart()

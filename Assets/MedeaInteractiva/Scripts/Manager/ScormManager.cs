@@ -25,6 +25,24 @@ public class ScormManager : MonoBehaviour
 
     private IScormService _scormService;
 
+    private void Awake()
+    {
+        if (_instance == null)
+        {
+            _instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        if (_scormService == null)
+        {
+            Init();
+        }
+    }
+
     public void Init()
     {
 #if UNITY_EDITOR
@@ -45,12 +63,6 @@ public class ScormManager : MonoBehaviour
         if (result)
         {
             //Debug.Log("SCORM Initialized.");
-
-            string lastLocation = _scormService.GetLessonLocation();
-            if (!string.IsNullOrEmpty(lastLocation))
-            {
-                //Debug.Log("Resuming from: " + lastLocation);
-            }
         }
     }
 

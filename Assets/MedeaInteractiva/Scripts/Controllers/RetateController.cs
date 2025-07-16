@@ -66,6 +66,11 @@ public class RetateController : BaseController
             RetroalimentationController.SelectedRetro = _goodAnswers >= 3 ? 1 : 0;
             RetroalimentationController.ActualUIState = MainMenu.Preparate;
             BaseSceneController.Instance.ChangeState(UIState.Retroalimentation);
+            
+            if(_goodAnswers >= 3)
+            {
+                ScormManager.Instance.SetCompleted();
+            }
         }
     }
 
